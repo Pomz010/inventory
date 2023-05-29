@@ -1,7 +1,7 @@
 <x-header />
         <x-header-nav />
-        <div class="grid grid-cols-12">
-            <aside class="col-start-1 col-span-2 bg-blue-300">
+        <div class="flex">
+            <aside class="bg-blue-300">
                 <nav class="divide-y">
                         @php
                             $accordionItems = ['New Movement', 'Hardware', 'Software', 'Service Support', 'vendor', 'Toner', 'Others'];
@@ -28,6 +28,6 @@
                         {{-- <x-accordion-body accordionTitle="Reports"/> --}}
                 </nav>
             </aside>
-            <main class="col-start-3 col-span-10 bg-red-300 w-full"></main>
+            <main class="bg-red-300 w-fit"></main>
         </div>
 <x-footer />

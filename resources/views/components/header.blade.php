@@ -8,4 +8,4 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <div class="container-xl h-screen w-screen">
+    <div class="container-xl h-full w-full">
