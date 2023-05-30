@@ -10,7 +10,7 @@
             </svg>
         </span>
 
-        <div class="bg-white py-2 px-4 absolute right-0 w-max rounded divide-y-2 shadow-md">
+        <div class="bg-white py-2 px-4 absolute right-0 w-max rounded divide-y-2 shadow-md hidden">
             <div class="py-2 flex flex-col leading-8">
                 <span>Profile</span>
                 <span>Update credentials</span>
