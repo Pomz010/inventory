@@ -1,7 +1,7 @@
 <x-header />
         <x-header-nav />
         <div class="flex">
-            <aside class="bg-blue-300 h-[100vh]">
+            <aside class="bg-blue-300 h-[100vh] w-2/12">
                 <nav id="sidebar" class="divide-y">
                         @php
                             $accordionItems = ['New Movement', 'Hardware', 'Software', 'Service Support', 'vendor', 'Toner', 'Others'];
