@@ -5,9 +5,12 @@ const accordionContainer = document.querySelector('#sidebar');
 const accordionHeaders = Array.from(accordionContainer.children);
 
 
+
 accordionHeaders.forEach(header => {
     const accordion = new Accordion();
-    header.addEventListener('click', function(){
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Code to run when the DOM content has finished loading
         accordion.show(accordionHeaders);
-    });
+      });
 });

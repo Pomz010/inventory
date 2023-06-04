@@ -1,19 +1,21 @@
 export default class Accordion{
     show(headers){
-        console.log(headers);
         headers.forEach(header => {
-
-            header.addEventListener('click', function(){
-                console.log(this);
+            header.addEventListener('click', () => {
+                header.lastElementChild.classList.remove('hidden');
+                header.firstElementChild.lastElementChild.firstElementChild.classList.add('rotate-180');
+                this.hide(headers, header);
+                console.log(header.firstElementChild.lastElementChild.firstElementChild);
             })
-            // header.lastElementChild.classList.remove('hidden');
         });
-        
-        // this.hide();
     }
 
-    hide(header){
-        console.log('hide');
-        header.lastElementChild.classList.add('hidden');
+    hide(hs, activeHeader){
+        hs.forEach(header => {
+            if(header !== activeHeader){
+                header.lastElementChild.classList.add('hidden');
+                header.firstElementChild.lastElementChild.firstElementChild.classList.remove('rotate-180');
+            }
+        })
     }
 }
