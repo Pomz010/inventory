@@ -1,16 +1,18 @@
 import Accordion from "./modules/Accordion.mjs";
-
-const accordionItems = document.querySelector('#accordionItems');
-const accordionContainer = document.querySelector('#sidebar');
-const accordionHeaders = Array.from(accordionContainer.children);
+import UserMenu from "./modules/UserMenu.mjs"
 
 
-
-accordionHeaders.forEach(header => {
+document.addEventListener("DOMContentLoaded", function() {
+  // Code to run when the DOM content has finished loading
+  try {
+    const accordionContainer = document.querySelector('#sidebar');
+    const accordionHeaders = Array.from(accordionContainer.children);
+    const avatarIcon = document.querySelector('#userAvatar');
     const accordion = new Accordion();
-
-    document.addEventListener("DOMContentLoaded", function() {
-        // Code to run when the DOM content has finished loading
-        accordion.show(accordionHeaders);
-      });
+    const userMenu = new UserMenu();
+      accordion.show(accordionHeaders);
+      userMenu.show(avatarIcon);
+  } catch (error) {
+    
+  }
 });

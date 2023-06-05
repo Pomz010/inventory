@@ -5,7 +5,6 @@ export default class Accordion{
                 header.lastElementChild.classList.remove('hidden');
                 header.firstElementChild.lastElementChild.firstElementChild.classList.add('rotate-180');
                 this.hide(headers, header);
-                console.log(header.firstElementChild.lastElementChild.firstElementChild);
             })
         });
     }

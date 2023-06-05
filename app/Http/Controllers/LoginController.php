@@ -25,17 +25,15 @@ class LoginController extends Controller
             'username' => $credentials['loginUsername'], 
             'password' => $credentials['loginPassword']
             ])){
-
             $request->session()->regenerate();
-            return view('pages.homepage');
-        } else {
-
-            return view('pages.login-page');
+            return redirect('/');
         }
+
+        return redirect('/');
     }
 
     function signout(){
         auth()->logout();
-        return view('pages.login-page');
+        return redirect('/');
     }
 }
