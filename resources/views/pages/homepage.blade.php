@@ -30,4 +30,5 @@
             </aside>
             <main class="bg-red-300 w-full"></main>
         </div>
+        <x-modal.backdrop />
 <x-footer />

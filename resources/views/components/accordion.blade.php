@@ -13,7 +13,7 @@
         @foreach ($items as $item)
             @switch($item)
                 @case('New Movement')
-                    <li class="flex whitespace-nowrap items-center gap-x-1 py-1 pl-5 text-xs"><span><img class="w-5/5 h-6" src="img/movement.svg" alt=""></span>{{ $item }}</li> 
+                    <li class="flex whitespace-nowrap items-center gap-x-1 py-1 pl-5 text-xs"><a href="http://"><span><img class="w-5/5 h-6" src="img/movement.svg" alt=""></span>{{ $item }}</a></li> 
                     @break
             
                 @case('Hardware')
