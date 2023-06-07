@@ -1,5 +1,5 @@
 export default class Accordion{
-    show(headers){
+    showItems(headers){
         headers.forEach(header => {
             header.firstElementChild.addEventListener('click', () => {
                 if(header.lastElementChild.classList.contains('hidden')){
@@ -8,12 +8,12 @@ export default class Accordion{
                     header.lastElementChild.classList.add('hidden');
                 }
                 header.firstElementChild.lastElementChild.firstElementChild.classList.add('rotate-180');
-                this.hide(headers, header);
+                this.hideItems(headers, header);
             })
         });
     }
 
-    hide(hs, activeHeader){
+    hideItems(hs, activeHeader){
         hs.forEach(header => {
             if(header !== activeHeader){
                 header.lastElementChild.classList.add('hidden');

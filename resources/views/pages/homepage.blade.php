@@ -31,6 +31,6 @@
             <main class="bg-red-300 w-full"></main>
         </div>
         <x-modal.backdrop >
-            {{-- <x-modal.asset-movement /> --}}
+            <x-modal.asset-movement />
         </x-modal.backdrop>
 <x-footer />
