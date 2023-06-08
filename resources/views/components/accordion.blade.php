@@ -13,15 +13,15 @@
         @foreach ($items as $item)
             @switch($item)
                 @case('New Movement')
-                    <li class="flex whitespace-nowrap items-center gap-x-1 py-1 pl-5 text-xs flex-nowrap"><span><img class="w-5/5 h-6" src="img/movement.svg" alt=""></span>{{ $item }}</li> 
+                    <li class="flex flex-row whitespace-nowrap items-center gap-x-1 py-1 pl-5 text-xs"><a class="flex items-center gap-x-1" href="{{ route('asset-movement') }}"><img class="w-5/5 h-6" src="img/movement.svg" alt="">{{ $item }}</a></li> 
                     @break
             
                 @case('Hardware')
-                    <li class="flex whitespace-nowrap items-center gap-x-1 py-2 pl-5 text-xs flex-nowrap"><span><img class="w-5/5 h-6" src="img/hardware.svg" alt=""></span>{{ $item }}</li> 
+                    <li class="flex flex-row whitespace-nowrap items-center gap-x-1 py-2 pl-5 text-xs"><a class="flex items-center gap-x-1" href="{{ route('hardware') }}"><img class="w-5/5 h-6" src="img/hardware.svg" alt="">{{ $item }}</a></li> 
                     @break
             
                 @default
-                    <li class="flex whitespace-nowrap items-center gap-x-1 py-2 pl-5 text-xs flex-nowrap"><span><img class="w-5/5 h-6" src="img/movement.svg" alt=""></span>{{ $item }}</li> 
+                    <li class="flex flex-row whitespace-nowrap items-center gap-x-1 py-2 pl-5 text-xs"><a class="flex items-center gap-x-1" href=""><img class="w-5/5 h-6" src="img/movement.svg" alt="">{{ $item }}</a></li> 
             @endswitch   
         @endforeach 
     </ul>

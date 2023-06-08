@@ -1,6 +1,6 @@
 import Accordion from "./modules/Accordion.mjs";
 import UserMenu from "./modules/UserMenu.mjs"
-import ModalForm from "./modules/ModalForm.mjs";
+// import ModalForm from "./modules/ModalForm.mjs";
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // const accordionItems = document.querySelector('.accordionItems').children;
     const accordion = new Accordion();
     const userMenu = new UserMenu();
-    const modalForm = new ModalForm();
+    // const modalForm = new ModalForm();
       accordion.showItems(accordionHeaders);
       userMenu.show(avatarIcon);
-      modalForm.showModal(accordionHeaders);
+    //   modalForm.showModal(accordionHeaders);
   } catch (error) {
     
   }
