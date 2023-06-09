@@ -1,5 +1,5 @@
-<x-main>
-    <div class="bg-neutral-100 h-auto max-w-sm min-w-fit w-3/12 p-4 rounded-md">
+
+    <div class="bg-neutral-100 h-auto max-w-sm min-w-fit w-3/12 p-4 rounded-md place-self-center">
         <div class="flex justify-between border-b border-slate-300 py-2 mb-2">
             <h2 class="font-bold">New Movement</h2>
             <span><img class="h-6" src="./img/close-btn.svg" alt=""></span>
@@ -56,4 +56,3 @@
             </select>
         </form>
     </div>
-</x-main>

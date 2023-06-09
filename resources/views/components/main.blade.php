@@ -28,9 +28,7 @@
                         {{-- <x-accordion accordionTitle="Reports"/> --}}
                 </nav>
             </aside>
-            <main class="bg-red-300 w-full">
-                {{ $slot }}
-            </main>
+            <main class="bg-red-300 w-full grid items-center p-6"></main>
         </div>
         <x-modal.backdrop >
             <x-modal.asset-movement />

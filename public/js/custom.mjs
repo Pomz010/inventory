@@ -1,5 +1,6 @@
 import Accordion from "./modules/Accordion.mjs";
 import UserMenu from "./modules/UserMenu.mjs"
+import HardwareAssets from "./modules/HardwareAssets.mjs";
 // import ModalForm from "./modules/ModalForm.mjs";
 
 
@@ -9,14 +10,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const accordionContainer = document.querySelector('#sidebar');
     const accordionHeaders = Array.from(accordionContainer.children);
     const avatarIcon = document.querySelector('#userAvatar');
-    // const accordionItems = document.querySelector('.accordionItems').children;
+    const tabHeaders = document.querySelector('#hardwareTabs');
     const accordion = new Accordion();
     const userMenu = new UserMenu();
-    // const modalForm = new ModalForm();
+    const assets = new HardwareAssets();
       accordion.showItems(accordionHeaders);
       userMenu.show(avatarIcon);
-    //   modalForm.showModal(accordionHeaders);
+      assets.showTabContent(tabHeaders);
+      console.log(document.querySelector('#hardwareTabs'));
   } catch (error) {
     
   }
+  
+
+//   document.addEventListener('click', (e) => {
+
+//   })
 });
+
