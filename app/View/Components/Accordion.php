@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class AccordionBody extends Component
+class Accordion extends Component
 {
     public $accordionTitle;
     public array $items;
@@ -26,6 +26,6 @@ class AccordionBody extends Component
      */
     public function render(): View|Closure|string|array
     {
-        return view('components.accordion-body');
+        return view('components.accordion');
     }
 }

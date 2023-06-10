@@ -1,4 +1,4 @@
-<x-header />
+{{-- <x-header />
         <x-header-nav />
         <div class="flex">
             <aside class="bg-blue-300 h-[100vh] min-w-fit">
@@ -25,12 +25,14 @@
                         <x-accordion accordionTitle="Users" :items="$accordionItems" icon="img/users.svg" />
 
 
-                        {{-- <x-accordion accordionTitle="Reports"/> --}}
+                        <x-accordion accordionTitle="Reports"/>
                 </nav>
-            </aside>
-            <main class="bg-red-300 w-full grid items-center p-6"></main>
-        </div>
+            </aside> --}}
+            <main class="bg-red-300 w-full grid items-center p-6">
+                {{ $slot }}
+            </main>
+        {{-- </div>
         <x-modal.backdrop >
             <x-modal.asset-movement />
         </x-modal.backdrop>
-<x-footer />
+<x-footer /> --}}

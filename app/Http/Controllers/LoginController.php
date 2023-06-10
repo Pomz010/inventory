@@ -10,6 +10,7 @@ class LoginController extends Controller
     function index(){
         if(auth()->check()){
             return view('pages.homepage');
+            // return '<h1>POMS POGI</h1>';
         } else {
             return view('pages.login-page');
         }

@@ -30,9 +30,9 @@ export default class Accordion{
             tab.addEventListener('click', e => {
                 console.log(e.target.pathname);
                 const hrefValue = e.target.pathname;
-                // console.log(tab);
-                this.pageRequest(hrefValue);
-                e.preventDefault();
+                console.log(tab);
+                // this.pageRequest(hrefValue);
+                // e.preventDefault();
             })
         })
     }
