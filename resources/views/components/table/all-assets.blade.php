@@ -1,9 +1,9 @@
 <div class="flex flex-col gap-1">
     {{-- Table Filter --}}
     <div class="flex justify-between">
-        <form>
-            <label for="hardwareRow">Show</label>
-            <select class="border place-self-start" name="hardwareRow" id="hardwareRow">
+        <form action="">
+            <label for="rowQty">Show</label>
+            <select class="border place-self-start" name="rowQty" id="rowQty">
                 <option value="10">10</option>
                 <option value="25">25</option>
                 <option value="50">50</option>

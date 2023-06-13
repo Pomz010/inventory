@@ -5,6 +5,7 @@ export default class UserMenu{
             const avatarMenu = icon.nextElementSibling;
             avatarMenu.classList.toggle('hidden');
             this.hide(icon, avatarMenu);
+            // console.log(icon);
         })
     }
 

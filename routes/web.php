@@ -17,9 +17,10 @@ use App\Http\Controllers\MovementController;
 |
 */
 
-Route::get('/', [LoginController::class, 'index']);
+Route::get('/', [LoginController::class, 'index'])->name('home');
 Route::post('/', [LoginController::class, 'login']);
 Route::get('/signout', [LoginController::class, 'signout']);
 
+Route::get('/asset-movement', [MovementController::class, 'show'])->name('show-movement');
 Route::get('/create-movement', [MovementController::class, 'create'])->name('asset-movement');
 Route::get('/create-hardware', [HardwareController::class, 'create'])->name('hardware');

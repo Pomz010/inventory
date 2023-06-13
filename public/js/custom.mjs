@@ -1,21 +1,17 @@
-import Accordion from "./modules/Accordion.mjs";
 import UserMenu from "./modules/UserMenu.mjs"
-// import HardwareAssets from "./modules/HardwareAssets.mjs";
+import Assets from "./modules/Assets.mjs";
 
 
 document.addEventListener("DOMContentLoaded", function() {
   // Code to run when the DOM content has finished loading
   try {
-    const accordionContainer = document.querySelector('#sidebar');
-    const accordionHeaders = Array.from(accordionContainer.children);
     const avatarIcon = document.querySelector('#userAvatar');
-    // const tabHeaders = document.querySelector('#hardwareTabs');
-    const accordion = new Accordion();
+    const tableContainer = document.querySelector('#tableContainer');
+    const assetMenu = document.querySelector('#assetMenu');
     const userMenu = new UserMenu();
-    // const assets = new HardwareAssets();
-      accordion.showItems(accordionHeaders);
+    const assets = new Assets();
       userMenu.show(avatarIcon);
-      // assets.showTabContent(tabHeaders);
+      assets.show(assetMenu, tableContainer);
   } catch (error) {
     
   }
