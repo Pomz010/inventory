@@ -1,12 +1,13 @@
 export default class Assets{
     show(assetMenu, tabContent){
         const tabs = Array.from(assetMenu.children);
-        // const assetTables = Array.from(document.querySelector('#tableContainer').children);
         tabs.forEach(list => {
             list.addEventListener('click', e => {
                 list.setAttribute('class', 'activeTab');
 
                 this.hide(tabs, list);
+                // console.log(e.target.innerText);
+                // this.hide(tabs, e.target.innerText);
             })
         })
     }
@@ -54,6 +55,31 @@ export default class Assets{
             if(assetTable !== visibleTable) {
                 assetTable.classList.add('hidden');
             }
+        })
+    }
+
+    dropdown(tonerTab){
+        console.log(tonerTab);
+        tonerTab.addEventListener('mouseover', e => {
+            const tonerDropdown = tonerTab.lastElementChild;
+            const tonerDropdownItems = Array.from(tonerTab.lastElementChild.children);
+
+            tonerDropdown.addEventListener('mouseleave', e => {
+                tonerDropdown.classList.add('hidden');
+            })
+
+            tonerTab.addEventListener('mouseleave', e => {
+                tonerDropdown.classList.add('hidden');
+            })
+
+            tonerDropdownItems.forEach(item => {
+                item.addEventListener('click', e => {
+                    tonerDropdown.classList.add('hidden');
+                    this.show(item);
+                })
+            })
+
+            tonerDropdown.classList.remove('hidden')
         })
     }
 

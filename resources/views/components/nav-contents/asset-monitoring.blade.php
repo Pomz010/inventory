@@ -4,11 +4,12 @@
             <li class="activeTab"><a href="#">All Assets</a></li>
             <li class="btnPadding"><a href="#">Hardware</a></li>
             <li class="btnPadding"><a href="#">Software</a></li>
-            <li class="btnPadding">
-                <select name="" id="">
-                    <option value="transactions">Transactions</option>
-                    <option value="balance">Balance</option>
-                </select>
+            <li id="toner" class="btnPadding relative">
+                <span>Toner</span>
+                <span class="flex flex-col absolute bg-blue-500 text-white rounded-md hidden">
+                    <a class="hover:bg-blue-400 hover:rounded-md w-full block px-2 py-1" href="#">Transactions</a>
+                    <a class="hover:bg-blue-400 hover:rounded-md w-full block px-2 py-1" href="#">Balance</a>
+                </span>
             </li>
             <li class="btnPadding"><a href="#">Others</a></li>
         </ul>
