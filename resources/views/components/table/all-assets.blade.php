@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-1">
+<div id="assetsTable" class="flex flex-col gap-1">
     {{-- Table Filter --}}
     <div class="flex justify-between">
         <form action="">
