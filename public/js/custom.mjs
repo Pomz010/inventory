@@ -9,11 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const tableContainer = document.querySelector('#tableContainer');
     const assetMenu = document.querySelector('#assetMenu');
     const toner = document.querySelector('#toner');
+    const hardwareCategory = document.querySelector('#hardwareCategory');
     const userMenu = new UserMenu();
     const assets = new Assets();
       userMenu.show(avatarIcon);
       assets.show(assetMenu, tableContainer);
       assets.dropdown(toner);
+      assets.selectCategory(hardwareCategory);
   } catch (error) {
     
   }

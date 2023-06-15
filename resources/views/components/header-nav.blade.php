@@ -6,7 +6,8 @@
                 <img class="h-8 w-16" src="img/navlogo.png" alt="Header logo">
             </span>
     
-            <ul class="flex text-white gap-x-4">
+            <ul class="flex text-white gap-x-6">
+                <li><a href="#">Dashboard</a></li>
                 <li><a href="{{ route('show-movement') }}">Asset Monitoring</a></li>
                 <li><a href="#">Department</a></li>
                 <li><a href="#">Employee List</a></li>

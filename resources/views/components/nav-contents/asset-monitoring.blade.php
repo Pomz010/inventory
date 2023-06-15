@@ -7,8 +7,8 @@
             <li id="toner" class="btnPadding relative">
                 <span>Toner</span>
                 <span class="flex flex-col absolute bg-blue-500 text-white rounded-md hidden">
-                    <a class="hover:bg-blue-400 hover:rounded-md w-full block px-2 py-1" href="#">Transactions</a>
                     <a class="hover:bg-blue-400 hover:rounded-md w-full block px-2 py-1" href="#">Balance</a>
+                    <a class="hover:bg-blue-400 hover:rounded-md w-full block px-2 py-1" href="#">Transactions</a>
                 </span>
             </li>
             <li class="btnPadding"><a href="#">Others</a></li>
@@ -20,5 +20,7 @@
         <x-table.all-assets />
         <x-table.hardware />
         <x-table.software />
+        <x-table.toner-balance />
+        <x-table.toner-transactions />
     </div>
 </x-main>

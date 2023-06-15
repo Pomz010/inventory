@@ -1,14 +1,44 @@
 export default class Assets{
+    selectCategory(category){
+        const categories = Array.from(document.querySelector('#categories').children);
+        console.log(category.value);
+        this.showTable(category.value);
+        category.addEventListener('change', e => {
+            console.log(category.value);
+            this.showTable(category.value);
+            
+        })
+
+        // categories.forEach(category => {
+        //     category.addEventListener()
+        // })
+    }
+
     show(assetMenu, tabContent){
         const tabs = Array.from(assetMenu.children);
         tabs.forEach(list => {
-            list.addEventListener('click', e => {
-                list.setAttribute('class', 'activeTab');
+            
+            let tableName;
+            if(list.childElementCount > 1) {
+                // console.log(list.childElementCount);
+                // console.log(list.lastElementChild.children);
+                const tables = Array.from(list.lastElementChild.children);
+                tables.forEach(table => {
+                    table.addEventListener('click', e => {
+                        tableName = table.innerText;
+                        console.log(table.parentElement.parentElement);
+                        this.hide(tabs, tableName)
+                        this.showTable(tableName);
+                    })
+                })
+            } else {
+                list.addEventListener('click', e => {
+                    list.setAttribute('class', 'activeTab');
+                    this.hide(tabs, list);
+                    this.showTable(list.innerText);
+                })
+            }
 
-                this.hide(tabs, list);
-                // console.log(e.target.innerText);
-                // this.hide(tabs, e.target.innerText);
-            })
         })
     }
 
@@ -22,26 +52,71 @@ export default class Assets{
         })
     }
 
-    showTable(tab){
-        console.log(tab.innerText);
+    showTable(tab){    
+        console.log(tab)   
         let table;
-        switch (tab.innerText) {
+        const tonerTab = document.querySelector('#toner');
+        const categories = Array.from(document.querySelector('#categories').children);
+        switch (tab) {
             case 'Hardware':
                 table = document.querySelector('#hardwareTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
+                console.log(table);
                 break;
 
             case 'All Assets':
                 table = document.querySelector('#assetsTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
+                console.log(table);
                 break;
 
             case 'Software':
                 table = document.querySelector('#softwareTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
+                console.log(table);
+                break;
+
+            case 'Balance':
+                // tonerTab = document.querySelector('#toner');
+                table = document.querySelector('#tonerBalanceTable');
+                table.classList.remove('hidden');
+                this.hideTable(table);
+                tonerTab.setAttribute('class', 'activeTab')
+                console.log(table);
+                break;
+
+            case 'Transactions':
+                // tonerTab = document.querySelector('#toner');
+                table = document.querySelector('#tonerTransactionsTable');
+                table.classList.remove('hidden');
+                this.hideTable(table);
+                tonerTab.setAttribute('class', 'activeTab')
+                console.log(table);
+                break;
+
+            case 'system unit':
+                // tonerTab = document.querySelector('#toner');
+                table = document.querySelector('#systemUnit');
+                categories.forEach(category => {
+                    if(category.id !== 'systemUnit'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'laptop':
+                // tonerTab = document.querySelector('#toner');
+                table = document.querySelector('#laptop');
+                categories.forEach(category => {
+                    if(category.id !== 'laptop'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
                 break;
         
             default:
@@ -59,7 +134,7 @@ export default class Assets{
     }
 
     dropdown(tonerTab){
-        console.log(tonerTab);
+        // console.log(tonerTab);
         tonerTab.addEventListener('mouseover', e => {
             const tonerDropdown = tonerTab.lastElementChild;
             const tonerDropdownItems = Array.from(tonerTab.lastElementChild.children);

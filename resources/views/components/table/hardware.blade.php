@@ -1,7 +1,9 @@
 <div id="hardwareTable" class="flex flex-col gap-1 hidden">
     {{-- Table Filter --}}
     <div class="flex justify-between">
-        <form>
+
+        <form class="flex gap-x-8">
+          <div class="border-r-2 border-slate-950 pr-8">
             <label for="hardwareRow">Show</label>
             <select class="border place-self-start" name="hardwareRow" id="hardwareRow">
                 <option value="10">10</option>
@@ -11,6 +13,25 @@
                 <option value="100">100</option>
             </select>
             <span>entries</span>
+          </div>
+
+          <div>
+            <label for="hardwareCategory">Category</label>
+            <select class="border" name="hardwareCategory" id="hardwareCategory">
+              <option value="laptop">Laptop</option>
+              <option value="system unit">System Unit</option>
+              <option value="monitor">Monitor</option>
+              <option value="printer">Printer</option>
+              <option value="projector">Projector</option>
+              <option value="ups">UPS</option>
+              <option value="router">Router</option>
+              <option value="firewall">Firewall</option>
+              <option value="switch">Switch</option>
+              <option value="access point">Access Point</option>
+              <option value="mobile devices">Mobile Devices</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
         </form>
         <div>
             <label for="">Search</label>
@@ -19,40 +40,9 @@
     </div>
     
     {{-- Table --}}
-    <table class="table-auto border border-collapse">
-        <thead>
-          <tr class="">
-            <th class="border px-2 py-1">#</th>
-            <th class="border px-2 py-1">Asset Type</th>
-            <th class="border px-2 py-1">Brand</th>
-            <th class="border px-2 py-1">Model</th>
-            <th class="border px-2 py-1">Asset Tag</th>
-            <th class="border px-2 py-1">Processor</th>
-            <th class="border px-2 py-1">Memory</th>
-            <th class="border px-2 py-1">Storage</th>
-            <th class="border px-2 py-1">Graphics Card</th>
-            <th class="border px-2 py-1">Date Purchased</th>
-            <th class="border px-2 py-1">Current User</th>
-            <th class="border px-2 py-1">Actions</th>
-            <th class="border px-2 py-1">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-2 py-1">1</td>
-            <td class="border px-2 py-1">Laptop</td>
-            <td class="border px-2 py-1">Lenovo</td>
-            <td class="border px-2 py-1">ThinkPad L14</td>
-            <td class="border px-2 py-1">APC-00603</td>
-            <td class="border px-2 py-1">Intel Core i5-1135G7</td>
-            <td class="border px-2 py-1">8Gb</td>
-            <td class="border px-2 py-1">500Gb SSD</td>
-            <td class="border px-2 py-1">Integrated</td>
-            <td class="border px-2 py-1">Oct. 9, 2021</td>
-            <td class="border px-2 py-1">Rolly A. Castillo</td>
-            <td class="border px-2 py-1">In-use</td>
-            <td class="border px-2 py-1">Good</td>
-          </tr>
-        </tbody>
-    </table>
+    <div id="categories">
+      <x-table.laptop-category />
+      <x-table.system-unit-category />
+    </div>
+    
 </div>
