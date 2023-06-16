@@ -3,9 +3,9 @@
     {{-- Table --}}
     <table class="table-auto border border-collapse">
         <thead>
-            <tr class="grid justify-center items-center">
-                <th class="col-span-full">Transactions</th>
-            </tr>
+            {{-- <tr>
+                <th>Transactions</th>
+            </tr> --}}
             <tr class="">
                 <th class="border px-2 py-1">#</th>
                 <th class="border px-2 py-1">Date</th>

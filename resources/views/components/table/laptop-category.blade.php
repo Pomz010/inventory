@@ -7,6 +7,7 @@
             <th class="border px-2 py-1">Brand</th>
             <th class="border px-2 py-1">Model</th>
             <th class="border px-2 py-1">Asset Tag</th>
+            <th class="border px-2 py-1">Serial #</th>
             <th class="border px-2 py-1">Processor</th>
             <th class="border px-2 py-1">Memory</th>
             <th class="border px-2 py-1">Storage</th>
@@ -24,6 +25,7 @@
             <td class="border px-2 py-1">Lenovo</td>
             <td class="border px-2 py-1">ThinkPad L14</td>
             <td class="border px-2 py-1">APC-00603</td>
+            <td class="border px-2 py-1">XXX-XXX-XXX-XX</td>
             <td class="border px-2 py-1">Intel Core i5-1135G7</td>
             <td class="border px-2 py-1">8Gb</td>
             <td class="border px-2 py-1">500Gb SSD</td>

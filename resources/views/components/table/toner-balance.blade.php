@@ -3,9 +3,9 @@
     {{-- Table --}}
     <table class="table-auto border border-collapse">
         <thead>
-          <tr>
+          {{-- <tr>
             <th>Remaining Balance</th>
-          </tr>
+          </tr> --}}
           <tr class="">
             <th class="border px-2 py-1">#</th>
             <th class="border px-2 py-1">Printer Model</th>

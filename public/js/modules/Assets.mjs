@@ -118,7 +118,87 @@ export default class Assets{
                 })
                 table.classList.remove('hidden');
                 break;
-        
+
+            case 'monitor':
+                table = document.querySelector('#monitor');
+                categories.forEach(category => {
+                    if(category.id !== 'monitor'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'printer':
+                table = document.querySelector('#printer');
+                categories.forEach(category => {
+                    if(category.id !== 'printer'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'ups':
+                table = document.querySelector('#ups');
+                categories.forEach(category => {
+                    if(category.id !== 'ups'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'router':
+                table = document.querySelector('#router');
+                categories.forEach(category => {
+                    if(category.id !== 'router'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'firewall':
+                table = document.querySelector('#firewall');
+                categories.forEach(category => {
+                    if(category.id !== 'firewall'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'switch':
+                table = document.querySelector('#switch');
+                categories.forEach(category => {
+                    if(category.id !== 'switch'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'access point':
+                table = document.querySelector('#accessPoint');
+                categories.forEach(category => {
+                    if(category.id !== 'accessPoint'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'mobile devices':
+                table = document.querySelector('#mobileDevice');
+                categories.forEach(category => {
+                    if(category.id !== 'mobileDevice'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
             default:
                 break;
         }

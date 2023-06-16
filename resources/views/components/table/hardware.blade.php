@@ -22,14 +22,12 @@
               <option value="system unit">System Unit</option>
               <option value="monitor">Monitor</option>
               <option value="printer">Printer</option>
-              <option value="projector">Projector</option>
               <option value="ups">UPS</option>
               <option value="router">Router</option>
               <option value="firewall">Firewall</option>
               <option value="switch">Switch</option>
               <option value="access point">Access Point</option>
               <option value="mobile devices">Mobile Devices</option>
-              <option value="others">Others</option>
             </select>
           </div>
         </form>
@@ -43,6 +41,14 @@
     <div id="categories">
       <x-table.laptop-category />
       <x-table.system-unit-category />
+      <x-table.monitor-category />
+      <x-table.printer-category />
+      <x-table.ups-category />
+      <x-table.router-category />
+      <x-table.firewall-category />
+      <x-table.switch-category />
+      <x-table.access-point-category />
+      <x-table.mobile-devices-category />
     </div>
     
 </div>

@@ -5,7 +5,7 @@
         <th class="border px-2 py-1">#</th>
         <th class="border px-2 py-1">Asset Type</th>
         <th class="border px-2 py-1">Brand</th>
-        <th class="border px-2 py-1">Model</th>
+        <th class="border px-2 py-1">Board Model</th>
         <th class="border px-2 py-1">Asset Tag</th>
         <th class="border px-2 py-1">Processor</th>
         <th class="border px-2 py-1">Memory</th>
