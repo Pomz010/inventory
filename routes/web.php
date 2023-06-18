@@ -17,7 +17,7 @@ use App\Http\Controllers\MovementController;
 |
 */
 
-Route::get('/', [LoginController::class, 'index'])->name('home');
+Route::get('/', [LoginController::class, 'index'])->name('dashboard');
 Route::post('/', [LoginController::class, 'login']);
 Route::get('/signout', [LoginController::class, 'signout']);
 

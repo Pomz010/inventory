@@ -14,7 +14,7 @@
             <li class="btnPadding"><a href="#">Others</a></li>
         </ul>
 
-        <span class="btn bg-slate-500"><a href="{{ route('home') }}">Back</a></span>
+        <span class="btn bg-slate-500"><a href="{{ route('dashboard') }}">Back</a></span>
     </div>
     <div id="tableContainer" class="flex flex-col justify-center items-center">
         <x-table.all-assets />
