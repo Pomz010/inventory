@@ -3,12 +3,12 @@
     <nav class="flex justify-between">
         <div class="flex items-center gap-x-6">
             <span class="flex justify-center items-center">
-                <a id="navLogo" href="{{ route('dashboard') }}"><img class="h-8 w-16" src="img/navlogo.png" alt="Header logo"></a>
+                <a id="navLogo" href="{{ route('dashboard') }}"><img class="h-8 w-16" src="{{ asset('img/navlogo.png') }}" alt="Header logo"></a>
             </span>
     
             <ul id="mainNav" class="flex text-white gap-x-2">
                 <li class="px-2"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="px-2"><a href="{{ route('show-movement') }}">Asset Monitoring</a></li>
+                <li class="px-2"><a href="{{ route('show-assets') }}">Asset Monitoring</a></li>
                 <li class="px-2"><a href="#">Department</a></li>
                 <li class="px-2"><a href="#">Employee List</a></li>
                 <li class="px-2"><a href="#">Users</a></li>

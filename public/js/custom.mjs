@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tableContainer = document.querySelector('#tableContainer');
     const assetMenu = document.querySelector('#assetMenu');
     const toner = document.querySelector('#toner');
+    const newAsset = document.querySelector('#newEntry');
     const hardwareCategory = document.querySelector('#hardwareCategory');
     const userMenu = new UserMenu();
     const assets = new Assets();
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       userMenu.show(avatarIcon);
       assets.show(assetMenu, tableContainer);
       assets.dropdown(toner);
+      assets.dropdown(newAsset);
       assets.selectCategory(hardwareCategory);
       
       
@@ -28,8 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const mainNavItems = Array.from(document.querySelector('#mainNav').children);
   const mainNav = new MainNav(mainNavItems);
-  mainNav.setIndex();
   let activeNav = localStorage.getItem('navIndex')*1;
+
+  mainNav.setIndex();
   mainNav.activeNav(activeNav);
+  // localStorage.setItem('navIndex', 1);
+  console.log(localStorage.getItem('navIndex'));
 });
 
