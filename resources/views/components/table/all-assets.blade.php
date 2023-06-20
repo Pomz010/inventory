@@ -1,7 +1,7 @@
 <div id="assetsTable" class="flex flex-col gap-1">
     {{-- Table Filter --}}
-    <div class="flex justify-between">
-        <form action="">
+    <div class="flex justify-between bg-white p-2 rounded-md items-center">
+        <form>
             <label for="rowQty">Show</label>
             <select class="border place-self-start" name="rowQty" id="rowQty">
                 <option value="10">10</option>
@@ -12,14 +12,15 @@
             </select>
             <span>entries</span>
         </form>
-        <div>
+        <div class="bg-slate-100 px-4 py-1 rounded-lg">
             <label for="">Search</label>
-            <input class="border " type="search" name="" id="">
+            <input class="border-none bg-slate-100 focus:outline-none" type="search" name="" id="">
         </div>
     </div>
     
     {{-- Table --}}
-    <table class="table-auto border border-collapse">
+    <div class="p-2 bg-white rounded-lg">
+      <table class="table-auto border border-collapse">
         <thead>
           <tr class="">
             <th class="border px-2 py-1">#</th>
@@ -49,4 +50,6 @@
           </tr>
         </tbody>
     </table>
+    </div>
+    
 </div>

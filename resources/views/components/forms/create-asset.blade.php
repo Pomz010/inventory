@@ -1,5 +1,5 @@
 <x-main>
-    <div class="grid justify-center items-center">
+    <div class="grid h-screen justify-center items-center">
         @switch($asset)
             @case('laptop')
                 <x-forms.new-laptop />
@@ -13,9 +13,6 @@
                 <x-forms.new-monitor />
                 @break
             @default
-                
         @endswitch
     </div>
-
-    {{-- {{ $asset }} --}}
 </x-main>

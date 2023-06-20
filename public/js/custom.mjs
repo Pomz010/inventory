@@ -10,20 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const tableContainer = document.querySelector('#tableContainer');
     const assetMenu = document.querySelector('#assetMenu');
     const toner = document.querySelector('#toner');
-    const newAsset = document.querySelector('#newEntry');
+    const newAssetEntryTable = document.querySelector('#newEntryTable');
+    const newAssetEntryForm = document.querySelector('#newEntryForm');
     const hardwareCategory = document.querySelector('#hardwareCategory');
     const userMenu = new UserMenu();
     const assets = new Assets();
-    
-    
       userMenu.show(avatarIcon);
       assets.show(assetMenu, tableContainer);
       assets.dropdown(toner);
-      assets.dropdown(newAsset);
+      assets.dropdown(newAssetEntryTable);
+      assets.dropdown(newAssetEntryForm);
       assets.selectCategory(hardwareCategory);
-      
-      
-      console.log(activeNav);
   } catch (error) {
     // console.log(error);
   }

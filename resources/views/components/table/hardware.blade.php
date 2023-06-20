@@ -1,6 +1,6 @@
 <div id="hardwareTable" class="flex flex-col gap-1 hidden">
     {{-- Table Filter --}}
-    <div class="flex justify-between">
+    <div class="flex justify-between bg-white p-2 rounded-md items-center">
 
         <form class="flex gap-x-8">
           <div class="border-r-2 border-slate-950 pr-8">
@@ -31,14 +31,14 @@
             </select>
           </div>
         </form>
-        <div>
+        <div class="bg-slate-100 px-4 py-1 rounded-lg">
             <label for="">Search</label>
-            <input class="border " type="search" name="" id="">
+            <input class="border-none bg-slate-100 focus:outline-none" type="search" name="" id="">
         </div>
     </div>
     
     {{-- Table --}}
-    <div id="categories">
+    <div id="categories" class="p-2 bg-white rounded-lg">
       <x-table.laptop-category />
       <x-table.system-unit-category />
       <x-table.monitor-category />
