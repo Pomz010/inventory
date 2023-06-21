@@ -1,7 +1,9 @@
 <div class="bg-neutral-100 h-auto max-w-sm min-w-fit w-3/12 p-4 rounded-md">
     <div class="flex justify-between border-b border-slate-300 py-2 mb-2">
         <h2 class="font-bold">New System Unit</h2>
-        <span><img class="h-6" src="./img/close-btn.svg" alt=""></span>
+        <ul>
+            <x-forms.partials.asset-entry-form-container id="newEntry"/>
+        </ul>
     </div>
 
     <form class="grid grid-cols-2 gap-y-2 gap-x-4" action="#">

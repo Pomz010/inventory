@@ -1,18 +1,9 @@
-<div class="h-0 place-self-end w-full">
-    <select class="w-full" name="assetSelection" id="assetSelection" placeholder="Select Category">
-        <option value="laptop">laptop</option>
-        <option value="system unit">System Unit</option>
-        <option value="monitor">Monitory</option>
-        <option value="ups">ups</option>
-    </select>
-</div>
-
 <div class="bg-neutral-300 h-auto p-4 rounded-md shadow-lg">
     <div class="flex justify-between border-b border-slate-300 py-2 mb-2">
         <h2 class="font-bold">New Laptop</h2>
-        {{-- <span class="btn bg-slate-500">
-            <x-forms.partials.dropdown-category />
-        </span> --}}
+        <ul>
+            <x-forms.partials.asset-entry-form-container id="newEntry"/>
+        </ul>
     </div>
 
     <form class="grid grid-cols-2 gap-y-2 gap-x-4" action="#">

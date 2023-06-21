@@ -1,17 +1,18 @@
 export default class Assets{
+    // constructor(table, form, toner){
+    //     this.table = table;
+    //     this.form = form;
+    //     this.toner = toner;
+    // }
+
     selectCategory(category){
-        const categories = Array.from(document.querySelector('#categories').children);
-        console.log(category.value);
+        // const categories = Array.from(document.querySelector('#categories').children);
         this.showTable(category.value);
+
         category.addEventListener('change', e => {
             console.log(category.value);
             this.showTable(category.value);
-            
         })
-
-        // categories.forEach(category => {
-        //     category.addEventListener()
-        // })
     }
 
     show(assetMenu, tabContent){
@@ -20,8 +21,6 @@ export default class Assets{
             
             let tableName;
             if(list.childElementCount > 1) {
-                // console.log(list.childElementCount);
-                // console.log(list.lastElementChild.children);
                 const tables = Array.from(list.lastElementChild.children);
                 tables.forEach(table => {
                     table.addEventListener('click', e => {
@@ -53,7 +52,7 @@ export default class Assets{
     }
 
     showTable(tab){    
-        console.log(tab)   
+        // console.log(tab)   
         let table;
         const tonerTab = document.querySelector('#toner');
         const categories = Array.from(document.querySelector('#categories').children);
@@ -62,7 +61,6 @@ export default class Assets{
                 table = document.querySelector('#hardwareTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
-                console.log(table);
                 break;
 
             case 'All Assets':
@@ -214,7 +212,6 @@ export default class Assets{
     }
 
     dropdown(tonerTab){
-        // console.log(tonerTab);
         tonerTab.addEventListener('mouseover', e => {
             const tonerDropdown = tonerTab.lastElementChild;
             const tonerDropdownItems = Array.from(tonerTab.lastElementChild.children);

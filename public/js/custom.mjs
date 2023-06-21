@@ -11,27 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const assetMenu = document.querySelector('#assetMenu');
     const toner = document.querySelector('#toner');
     const newAssetEntryTable = document.querySelector('#newEntryTable');
-    const newAssetEntryForm = document.querySelector('#newEntryForm');
+    const entryBtn = document.querySelector('#newEntry');
     const hardwareCategory = document.querySelector('#hardwareCategory');
     const userMenu = new UserMenu();
     const assets = new Assets();
       userMenu.show(avatarIcon);
       assets.show(assetMenu, tableContainer);
-      assets.dropdown(toner);
       assets.dropdown(newAssetEntryTable);
-      assets.dropdown(newAssetEntryForm);
+      assets.dropdown(toner);
       assets.selectCategory(hardwareCategory);
+      
   } catch (error) {
-    // console.log(error);
+    console.log(error);
   }
 
+  
+
   const mainNavItems = Array.from(document.querySelector('#mainNav').children);
+  const entryBtn = document.querySelector('#newEntry');
   const mainNav = new MainNav(mainNavItems);
-  let activeNav = localStorage.getItem('navIndex')*1;
 
   mainNav.setIndex();
-  mainNav.activeNav(activeNav);
-  // localStorage.setItem('navIndex', 1);
-  console.log(localStorage.getItem('navIndex'));
+  mainNav.activeNav(localStorage.getItem('navIndex'));
+
+  if(entryBtn !== null){
+    const assets = new Assets();
+    assets.dropdown(entryBtn);
+  }
 });
 

@@ -13,8 +13,8 @@
             <span>entries</span>
         </form>
         <div class="bg-slate-100 px-4 py-1 rounded-lg">
-            <label for="">Search</label>
-            <input class="border-none bg-slate-100 focus:outline-none" type="search" name="" id="">
+            <label for="assetSearch">Search</label>
+            <input class="border-none bg-slate-100 focus:outline-none" type="search" name="assetSearch" id="assetSearch">
         </div>
     </div>
     
