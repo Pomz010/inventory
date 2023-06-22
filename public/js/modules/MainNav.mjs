@@ -1,38 +1,46 @@
 export default class MainNav{
-    constructor(mainNavItems){
-        this.mainNavItems = mainNavItems;
-    }
+    // constructor(mainNavItems){
+    //     this.mainNavItems = mainNavItems;
+    // }
 
-    setIndex(){
-        const navLogo = document.querySelector('#navLogo');
+    // setIndex(){
+    //     const navLogo = document.querySelector('#navLogo');
+    //     const mainNavItems = Array.from(document.querySelector('#mainNav').children);
+    //     console.log(mainNavItems);
 
-        this.mainNavItems.forEach(item => {
-            item.addEventListener('click', e => {
-                let navIndex = this.mainNavItems.indexOf(item) + 1;
-                localStorage.setItem('navIndex', navIndex);
-                // console.log(navIndex);
-                // e.preventDefault();
-            })
+    //     mainNavItems.forEach(item => {
+    //         item.addEventListener('click', e => {
+    //             let navIndex = mainNavItems.indexOf(item);
+    //             localStorage.setItem('navIndex', navIndex);
+    //             console.log(typeof(navIndex));
+    //             this.activeNav(localStorage.getItem('navIndex'));
+    //             console.log(localStorage.getItem('navIndex'));
+    //             e.preventDefault();
+    //         })
 
-            if(window.location.href === 'http://127.0.0.1:8000/'){
-                localStorage.clear();
-                localStorage.setItem('navIndex', 1);
-                this.activeNav(1);
-            }
+    //         if(window.location.href === 'http://127.0.0.1:8000/'){
+    //             localStorage.clear();
+    //             localStorage.setItem('navIndex', 1);
+    //             this.activeNav(1);
+    //         }
+    //     });
 
-        });
-
-        navLogo.addEventListener('click', e => {
-            localStorage.clear();
-            localStorage.setItem('navIndex', 1);
-            // e.preventDefault();
-        })
-
-        
-    }
+    //     navLogo.addEventListener('click', e => {
+    //         localStorage.clear();
+    //         localStorage.setItem('navIndex', 1);
+    //         e.preventDefault();
+    //     })
+    // }
 
     activeNav(index){        
-        document.querySelector(`#mainNav li:nth-child( ${ index } )`).classList.add('activeNav');
-        console.log(index);
+        // document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector(`#mainNav li:nth-child( ${ index } )`).classList.add('activeNav');
+            console.log(index);
+            // console.log(window.location.pathname);
+            // const str = window.location.pathname;
+            // if(str.includes('/create-asset')){
+            //     console.log('pogi');
+            // }
+        // })
     }
 }

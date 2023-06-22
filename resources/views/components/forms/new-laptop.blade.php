@@ -7,17 +7,15 @@
     </div>
 
     <form class="grid grid-cols-2 gap-y-2 gap-x-4" action="#">
+        
+        <label class="font-semibold" for="laptopAssetTag">Asset Tag</label>
+        <input id="laptopAssetTag" name="laptopAssetTag" type="text">
+
         <label class="font-semibold" for="brand">Brand</label>
         <input id="laptopBrand" name="laptopBrand" type="text">
 
         <label class="font-semibold" for="laptopModel">Model</label>
         <input id="laptopModel" name="laptopModel" type="text">
-
-        <label class="font-semibold" for="laptopAssetTag">Asset Tag</label>
-        <input id="laptopAssetTag" name="laptopAssetTag" type="text">
-
-        <label class="font-semibold" for="laptopSerial">Serial #</label>
-        <input id="laptopSerial" name="laptopSerial" type="text">
 
         <label class="font-semibold" for="laptopProcessor">Processor</label>
         <input id="laptopProcessor" name="laptopProcessor" type="text">
@@ -31,16 +29,22 @@
         <label class="font-semibold" for="graphicsCard">Graphics Card</label>
         <input id="graphicsCard" name="graphicsCard" type="text">
 
+        <label class="font-semibold" for="laptopSerial">Serial #</label>
+        <input id="laptopSerial" name="laptopSerial" type="text">
+
+        <label class="font-semibold" for="laptopSerial">OS</label>
+        <input id="laptopSerial" name="laptopSerial" type="text">
+
+        <label class="font-semibold" for="laptopSerial">OS License</label>
+        <input id="laptopSerial" name="laptopSerial" type="text">
+
+        <label class="font-semibold" for="laptopSerial">Hostname</label>
+        <input id="laptopSerial" name="laptopSerial" type="text">
+
         <label class="font-semibold" for="laptopPurchaseDate">Date Purchased</label>
         <input id="laptopPurchaseDate" name="laptopPurchaseDate" type="date">
 
-        <label class="font-semibold" for="laptopUser">Current User</label>
-        <input id="laptopUser" name="laptopUser" type="text">
-
-        <label class="font-semibold" for="laptopCondition">Condition</label>
-        <input id="laptopCondition" name="laptopCondition" type="text">
-
-        <label class="font-semibold" for="laptopStatus">Status</label>
-        <input id="laptopStatus" name="laptopStatus" type="text">
+        <label class="font-semibold" for="laptopCondition">Warranty Expiration</label>
+        <input id="laptopCondition" name="laptopCondition" type="date">
     </form>
 </div>

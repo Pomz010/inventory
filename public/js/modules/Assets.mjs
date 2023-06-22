@@ -17,6 +17,7 @@ export default class Assets{
 
     show(assetMenu, tabContent){
         const tabs = Array.from(assetMenu.children);
+        // console.log(tabs);
         tabs.forEach(list => {
             
             let tableName;
@@ -25,7 +26,7 @@ export default class Assets{
                 tables.forEach(table => {
                     table.addEventListener('click', e => {
                         tableName = table.innerText;
-                        console.log(table.parentElement.parentElement);
+                        // console.log(table.parentElement.parentElement);
                         this.hide(tabs, tableName)
                         this.showTable(tableName);
                     })
@@ -67,14 +68,14 @@ export default class Assets{
                 table = document.querySelector('#assetsTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
-                console.log(table);
+                // console.log(table);
                 break;
 
             case 'Software':
                 table = document.querySelector('#softwareTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
-                console.log(table);
+                // console.log(table);
                 break;
 
             case 'Balance':
@@ -83,7 +84,7 @@ export default class Assets{
                 table.classList.remove('hidden');
                 this.hideTable(table);
                 tonerTab.setAttribute('class', 'activeTab')
-                console.log(table);
+                // console.log(table);
                 break;
 
             case 'Transactions':
@@ -92,7 +93,7 @@ export default class Assets{
                 table.classList.remove('hidden');
                 this.hideTable(table);
                 tonerTab.setAttribute('class', 'activeTab')
-                console.log(table);
+                // console.log(table);
                 break;
 
             case 'system unit':
