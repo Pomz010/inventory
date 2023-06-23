@@ -1,5 +1,5 @@
 <x-main>
-    <div class="grid h-screen justify-center items-center">
+    <div class="grid justify-center items-center">
         @switch($asset)
             @case('laptop')
                 <x-forms.new-laptop />
@@ -20,7 +20,6 @@
             @case('ups')
                 <x-forms.new-ups />
                 @break
-
                 
             @case('router')
                 <x-forms.new-router />
@@ -36,6 +35,18 @@
 
             @case('access-point')
                 <x-forms.new-access-point />
+                @break
+
+            @case('mobile-device')
+                <x-forms.new-mobile-device />
+                @break
+
+            @case('software')
+                <x-forms.new-software />
+                @break
+
+            @case('others')
+                <x-forms.new-others />
                 @break
             @default
         @endswitch

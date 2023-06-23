@@ -12,6 +12,6 @@
         <li><a class="hover:bg-slate-600 w-full block px-2 py-1" href="{{ route('create-asset', ['asset' => 'access-point']) }}">Access Point</a></li>
         <li><a class="hover:bg-slate-600 w-full block px-2 py-1" href="{{ route('create-asset', ['asset' => 'mobile-device']) }}">Mobile Device</a></li>
         <li><a class="hover:bg-slate-600 w-full block px-2 py-1" href="{{ route('create-asset', ['asset' => 'software']) }}">Software</a></li>
-        <li><a class="hover:bg-slate-600 hover:rounded-b-md w-full block px-2 py-1" href="#">Others</a></li>
+        <li><a class="hover:bg-slate-600 hover:rounded-b-md w-full block px-2 py-1" href="{{ route('create-asset', ['asset' => 'others']) }}">Others</a></li>
     </ul>
 </li>

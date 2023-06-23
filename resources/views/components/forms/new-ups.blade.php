@@ -28,5 +28,14 @@
 
         <label class="font-semibold" for="laptopUser">Warranty Expiration</label>
         <input id="laptopUser" name="laptopUser" type="date">
+
+        <label class="font-semibold" for="laptopPurchaseDate">DR #</label>
+        <input id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+
+        <label class="font-semibold" for="laptopPurchaseDate">PO #</label>
+        <input id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+
+        <label class="font-semibold" for="laptopPurchaseDate">Price</label>
+        <input id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
     </form>
 </div>

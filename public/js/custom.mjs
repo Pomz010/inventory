@@ -8,15 +8,25 @@ import MainNav from "./modules/MainNav.mjs";
   const assets = new Assets();
   const mainNav = new MainNav();
 
+document.addEventListener('DOMContentLoaded', e => {
+  try {
+    const avatarIcon = document.querySelector('#userAvatar');
+    const userMenu = new UserMenu();
+      userMenu.show(avatarIcon);    
+  } catch (error) {
+  }
+
+})
+
   if(window.location.pathname === '/'){
     document.addEventListener('DOMContentLoaded', () => { 
-        const avatarIcon = document.querySelector('#userAvatar');
+      try {
         const entryBtn = document.querySelector('#newEntry');
-        const userMenu = new UserMenu();
-          userMenu.show(avatarIcon);
 
-          localStorage.setItem('navIndex', 1);
-          mainNav.activeNav(localStorage.getItem('navIndex'));
+        localStorage.setItem('navIndex', 1);
+        mainNav.activeNav(localStorage.getItem('navIndex'));
+      } catch (error) {
+      }
     })
   }
   
@@ -35,7 +45,7 @@ import MainNav from "./modules/MainNav.mjs";
         assets.selectCategory(hardwareCategory);
   
         localStorage.setItem('navIndex', 2);
-        console.log(localStorage.getItem('navIndex'));
+        // console.log(localStorage.getItem('navIndex'));
         mainNav.activeNav(localStorage.getItem('navIndex'));
       } catch (error) {
       }

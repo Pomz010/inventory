@@ -1,4 +1,4 @@
-<div id="hardwareTable" class="flex flex-col gap-1 hidden">
+<div id="hardwareTable" class="flex flex-col gap-1">
     {{-- Table Filter --}}
     <div class="flex justify-between bg-white p-2 rounded-md items-center">
 
@@ -18,6 +18,7 @@
           <div>
             <label for="hardwareCategory">Category</label>
             <select class="border" name="hardwareCategory" id="hardwareCategory">
+              <option value="all-assets">All Assets</option>
               <option value="laptop">Laptop</option>
               <option value="system unit">System Unit</option>
               <option value="monitor">Monitor</option>
@@ -28,6 +29,7 @@
               <option value="switch">Switch</option>
               <option value="access point">Access Point</option>
               <option value="mobile devices">Mobile Devices</option>
+              <option value="others">Others</option>
             </select>
           </div>
         </form>
@@ -39,6 +41,7 @@
     
     {{-- Table --}}
     <div id="categories" class="p-2 bg-white rounded-lg">
+      <x-table.all-assets />
       <x-table.laptop-category />
       <x-table.system-unit-category />
       <x-table.monitor-category />
@@ -49,6 +52,7 @@
       <x-table.switch-category />
       <x-table.access-point-category />
       <x-table.mobile-devices-category />
+      <x-table.others-category />
     </div>
     
 </div>

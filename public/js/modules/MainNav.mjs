@@ -35,7 +35,7 @@ export default class MainNav{
     activeNav(index){        
         // document.addEventListener('DOMContentLoaded', () => {
             document.querySelector(`#mainNav li:nth-child( ${ index } )`).classList.add('activeNav');
-            console.log(index);
+            // console.log(index);
             // console.log(window.location.pathname);
             // const str = window.location.pathname;
             // if(str.includes('/create-asset')){

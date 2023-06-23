@@ -1,13 +1,8 @@
 export default class Assets{
-    // constructor(table, form, toner){
-    //     this.table = table;
-    //     this.form = form;
-    //     this.toner = toner;
-    // }
 
     selectCategory(category){
         // const categories = Array.from(document.querySelector('#categories').children);
-        this.showTable(category.value);
+        // this.showTable(category.value);
 
         category.addEventListener('change', e => {
             console.log(category.value);
@@ -17,7 +12,7 @@ export default class Assets{
 
     show(assetMenu, tabContent){
         const tabs = Array.from(assetMenu.children);
-        // console.log(tabs);
+        // console.log(assetMenu);
         tabs.forEach(list => {
             
             let tableName;
@@ -37,6 +32,12 @@ export default class Assets{
                     this.hide(tabs, list);
                     this.showTable(list.innerText);
                 })
+
+                if(list.classList.contains('activeTab')){
+                    this.showTable(list.innerText);
+                    this.hide(tabs, list);
+                    console.log(list.innerText);
+                }
             }
 
         })
@@ -53,7 +54,7 @@ export default class Assets{
     }
 
     showTable(tab){    
-        // console.log(tab)   
+        console.log(tab)   
         let table;
         const tonerTab = document.querySelector('#toner');
         const categories = Array.from(document.querySelector('#categories').children);
@@ -62,13 +63,6 @@ export default class Assets{
                 table = document.querySelector('#hardwareTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
-                break;
-
-            case 'All Assets':
-                table = document.querySelector('#assetsTable');
-                table.classList.remove('hidden');
-                this.hideTable(table);
-                // console.log(table);
                 break;
 
             case 'Software':
@@ -93,6 +87,18 @@ export default class Assets{
                 table.classList.remove('hidden');
                 this.hideTable(table);
                 tonerTab.setAttribute('class', 'activeTab')
+                // console.log(table);
+                break;
+
+            case 'all-assets':
+                table = document.querySelector('#assetsTable');
+                categories.forEach(category => {
+                    if(category.id !== 'all-assets'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                this.hideTable(table);
                 // console.log(table);
                 break;
 
@@ -192,6 +198,16 @@ export default class Assets{
                 table = document.querySelector('#mobileDevice');
                 categories.forEach(category => {
                     if(category.id !== 'mobileDevice'){
+                        category.classList.add('hidden');
+                    }
+                })
+                table.classList.remove('hidden');
+                break;
+
+            case 'others':
+                table = document.querySelector('#others');
+                categories.forEach(category => {
+                    if(category.id !== 'others'){
                         category.classList.add('hidden');
                     }
                 })
