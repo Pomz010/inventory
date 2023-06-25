@@ -5,6 +5,7 @@ use App\Http\Controllers\AssetController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\MovementController;
+use App\Http\Controllers\DepartmentController;
 
 
 /*
@@ -24,5 +25,5 @@ Route::get('/signout', [LoginController::class, 'signout']);
 
 Route::get('/assets', [AssetController::class, 'show'])->name('show-assets');
 Route::get('/create-asset/{asset}', [AssetController::class, 'create'])->name('create-asset');
-// Route::get('/create-movement', [AssetController::class, 'create'])->name('asset-movement');
 Route::get('/create-hardware', [HardwareController::class, 'create'])->name('hardware');
+Route::get('/department', [DepartmentController::class, 'show'])->name('department');

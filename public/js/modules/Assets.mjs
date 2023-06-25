@@ -10,54 +10,57 @@ export default class Assets{
         })
     }
 
-    show(assetMenu, tabContent){
-        const tabs = Array.from(assetMenu.children);
-        // console.log(assetMenu);
-        tabs.forEach(list => {
-            
-            let tableName;
-            if(list.childElementCount > 1) {
-                const tables = Array.from(list.lastElementChild.children);
+    // Displays submenu from main nav
+    show(assetMenu){
+
+        const tabs = Array.from(assetMenu.children); //Sub menu items
+
+        tabs.forEach(tab => {
+            let tableName; 
+
+            if(tab.childElementCount > 1) { // Runs when submenu item is a dropdown item
+                const tables = Array.from(tab.lastElementChild.children);
                 tables.forEach(table => {
                     table.addEventListener('click', e => {
-                        tableName = table.innerText;
-                        // console.log(table.parentElement.parentElement);
-                        this.hide(tabs, tableName)
-                        this.showTable(tableName);
+                        tableName = table.innerText; // Gets the selected table name
+                        this.hide(tabs, tableName) // Hides the table that is not selected 
+                        this.showTable(tableName); // Shows the table of the selected table name
+                        e.preventDefault();
                     })
                 })
             } else {
-                list.addEventListener('click', e => {
-                    list.setAttribute('class', 'activeTab');
-                    this.hide(tabs, list);
-                    this.showTable(list.innerText);
+                tab.addEventListener('click', e => { // Runs when submenu is not a dropdown menu
+                    tab.setAttribute('class', 'activeTab'); // Show as selected or active tab when selected 
+                    this.hide(tabs, tab); // Removes as active tab 
+                    this.showTable(tab.innerText); // Displays table for the tab that is selected from the submenu
+                    e.preventDefault();
                 })
 
-                if(list.classList.contains('activeTab')){
-                    this.showTable(list.innerText);
-                    this.hide(tabs, list);
-                    console.log(list.innerText);
+                if(tab.classList.contains('activeTab')){ // Displays default table based on default selected tab from submenu
+                    this.showTable(tab.innerText);
+                    this.hide(tabs, tab);
+                    console.log(tab.innerText);
                 }
             }
 
         })
     }
 
-    hide(tabs, activeTab){
+    hide(tabs, activeTab){ // Removes css properties menu tabs that are not currently active
         tabs.forEach(tab => {
             if(tab.classList.contains('activeTab') && tab !== activeTab){
                 tab.classList.remove('activeTab', 'bg-blue-600');
                 tab.classList.add('btnPadding');
-                this.showTable(activeTab);
             }
         })
     }
 
-    showTable(tab){    
+    showTable(tab){ // Displays table based on the selected menu tab
         console.log(tab)   
-        let table;
-        const tonerTab = document.querySelector('#toner');
+        const tonerTab = document.querySelector('#tonerTab');
         const categories = Array.from(document.querySelector('#categories').children);
+        let table;
+
         switch (tab) {
             case 'Hardware':
                 table = document.querySelector('#hardwareTable');
@@ -73,7 +76,6 @@ export default class Assets{
                 break;
 
             case 'Balance':
-                // tonerTab = document.querySelector('#toner');
                 table = document.querySelector('#tonerBalanceTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
@@ -82,12 +84,16 @@ export default class Assets{
                 break;
 
             case 'Transactions':
-                // tonerTab = document.querySelector('#toner');
                 table = document.querySelector('#tonerTransactionsTable');
                 table.classList.remove('hidden');
                 this.hideTable(table);
                 tonerTab.setAttribute('class', 'activeTab')
                 // console.log(table);
+                break;
+
+            case 'Business Unit':
+                table = document.querySelector('#businessUnitTable');
+                table.classList.remove('hidden');
                 break;
 
             case 'all-assets':
@@ -98,12 +104,9 @@ export default class Assets{
                     }
                 })
                 table.classList.remove('hidden');
-                this.hideTable(table);
-                // console.log(table);
                 break;
 
             case 'system unit':
-                // tonerTab = document.querySelector('#toner');
                 table = document.querySelector('#systemUnit');
                 categories.forEach(category => {
                     if(category.id !== 'systemUnit'){
@@ -114,7 +117,6 @@ export default class Assets{
                 break;
 
             case 'laptop':
-                // tonerTab = document.querySelector('#toner');
                 table = document.querySelector('#laptop');
                 categories.forEach(category => {
                     if(category.id !== 'laptop'){
@@ -219,7 +221,7 @@ export default class Assets{
         }
     }
 
-    hideTable(visibleTable){
+    hideTable(visibleTable){ // Hides table when category is not already selected
         const tables = Array.from(document.querySelector('#tableContainer').children);
         tables.forEach(assetTable => {
             if(assetTable !== visibleTable) {
@@ -228,27 +230,28 @@ export default class Assets{
         })
     }
 
-    dropdown(tonerTab){
-        tonerTab.addEventListener('mouseover', e => {
-            const tonerDropdown = tonerTab.lastElementChild;
-            const tonerDropdownItems = Array.from(tonerTab.lastElementChild.children);
+    dropdown(hoveredTab){ // Hover dropdown menu feature
+        hoveredTab.addEventListener('mouseover', e => {
+            // console.log(hoveredTab);
+            const dropdownContainer = hoveredTab.lastElementChild;
+            const dropdownItems = Array.from(hoveredTab.lastElementChild.children);
 
-            tonerDropdown.addEventListener('mouseleave', e => {
-                tonerDropdown.classList.add('hidden');
+            // dropdownContainer.addEventListener('mouseleave', e => {
+            //     dropdownContainer.classList.add('hidden');
+            // })
+
+            hoveredTab.addEventListener('mouseleave', e => {
+                dropdownContainer.classList.add('hidden');
             })
 
-            tonerTab.addEventListener('mouseleave', e => {
-                tonerDropdown.classList.add('hidden');
-            })
-
-            tonerDropdownItems.forEach(item => {
+            dropdownItems.forEach(item => {
                 item.addEventListener('click', e => {
-                    tonerDropdown.classList.add('hidden');
+                    dropdownContainer.classList.add('hidden');
                     this.show(item);
                 })
             })
 
-            tonerDropdown.classList.remove('hidden')
+            dropdownContainer.classList.remove('hidden')
         })
     }
 

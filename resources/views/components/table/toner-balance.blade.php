@@ -1,11 +1,11 @@
-<div id="tonerBalanceTable" class="flex flex-col gap-1 hidden">
+<div id="tonerBalanceTable" class="flex flex-col p-2 bg-white rounded-lg gap-1 hidden">
     
     {{-- Table --}}
     <table class="table-auto border border-collapse">
+      <caption class="caption-top">
+        <h2 class="font-bold">Toner Balance</h2> 
+      </caption>
         <thead>
-          {{-- <tr>
-            <th>Remaining Balance</th>
-          </tr> --}}
           <tr class="">
             <th class="border px-2 py-1">#</th>
             <th class="border px-2 py-1">Printer Model</th>

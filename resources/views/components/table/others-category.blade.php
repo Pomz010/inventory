@@ -14,6 +14,8 @@
         <th class="border px-2 py-1">DR #</th>
         <th class="border px-2 py-1">PO #</th>
         <th class="border px-2 py-1">Price</th>
+        <th class="border px-2 py-1">Condition</th>
+        <th class="border px-2 py-1">Status</th>
       </tr>
     </thead>
     <tbody>
@@ -30,6 +32,8 @@
         <td class="border px-2 py-1">74964</td>
         <td class="border px-2 py-1">8000014066</td>
         <td class="border px-2 py-1">1291.97</td>
+        <th class="border px-2 py-1">Good</th>
+        <th class="border px-2 py-1">In-use</th>
       </tr>
     </tbody>
 </table>

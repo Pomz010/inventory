@@ -13,7 +13,10 @@
         <th class="border px-2 py-1">MAC Address</th>
         <th class="border px-2 py-1">Warranty</th>
         <th class="border px-2 py-1">Date Purchased</th>
-        <th class="border px-2 py-1">Actions</th>
+        <th class="border px-2 py-1">DR #</th>
+        <th class="border px-2 py-1">PO #</th>
+        <th class="border px-2 py-1">Price</th>
+        <th class="border px-2 py-1">Condition</th>
         <th class="border px-2 py-1">Status</th>
       </tr>
     </thead>
@@ -30,6 +33,9 @@
         <td class="border px-2 py-1">D8:0D:17:F0:61:2C</td>
         <td class="border px-2 py-1">N/A</td>
         <td class="border px-2 py-1">N/A</td>
+        <th class="border px-2 py-1"></th>
+        <th class="border px-2 py-1"></th>
+        <th class="border px-2 py-1"></th>
         <td class="border px-2 py-1">In-use</td>
         <td class="border px-2 py-1">Good</td>
       </tr>
