@@ -27,7 +27,7 @@
                 <span><a href="">Forgot password?</a></span>
             </div>
 
-            <button type="submit" class="bg-slate-950 text-white rounded-3xl">Submit</button>
+            <button type="submit" class="bg-slate-950 text-white rounded-3xl px-3 py-1">Submit</button>
         </form>
     </div>
 </div>
