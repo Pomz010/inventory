@@ -10,7 +10,7 @@
                 <li class="px-2"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li class="px-2"><a href="{{ route('show-assets') }}">Asset Monitoring</a></li>
                 <li class="px-2"><a href="{{ route('department') }}">Department</a></li>
-                <li class="px-2"><a href="#">Employee List</a></li>
+                <li class="px-2"><a href="{{ route('employees') }}">Employee List</a></li>
                 <li class="px-2"><a href="#">Users</a></li>
                 <li class="px-2"><a href="#">Vendor</a></li>
                 <li class="px-2"><a href="#">Service Support</a></li>

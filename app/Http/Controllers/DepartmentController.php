@@ -13,4 +13,13 @@ class DepartmentController extends Controller
             return redirect('/');
         }
     }
+
+    function create(string $department){
+        if(auth()->check()){
+            $newDepartment = $department;
+            return view('components.forms.create-department', ['department' => $newDepartment]);
+        } else {
+            return redirect('/');
+        }
+    }
 }

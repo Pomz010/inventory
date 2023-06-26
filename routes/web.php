@@ -6,7 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\MovementController;
 use App\Http\Controllers\DepartmentController;
-
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +27,6 @@ Route::get('/assets', [AssetController::class, 'show'])->name('show-assets');
 Route::get('/create-asset/{asset}', [AssetController::class, 'create'])->name('create-asset');
 Route::get('/create-hardware', [HardwareController::class, 'create'])->name('hardware');
 Route::get('/department', [DepartmentController::class, 'show'])->name('department');
+Route::get('/create-department/{department}', [DepartmentController::class, 'create'])->name('create-department');
+Route::get('/employees', [EmployeeController::class, 'show'])->name('employees');
+Route::get('/create-employee', [EmployeeController::class, 'create'])->name('create-employee');

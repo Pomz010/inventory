@@ -40,6 +40,10 @@ document.addEventListener('DOMContentLoaded', e => {
 // Event will only execute under /assets/* route
   if(window.location.pathname === '/assets' || window.location.pathname.includes('/create-asset')){
     document.addEventListener('DOMContentLoaded', () => { 
+
+      localStorage.setItem('navIndex', 2);
+      mainNav.activeNav(localStorage.getItem('navIndex'));
+
       try {
         const assetMenu = document.querySelector('#assetMenu');
         const newAssetEntryTable = document.querySelector('#newEntryTable');
@@ -49,26 +53,41 @@ document.addEventListener('DOMContentLoaded', e => {
         assets.dropdown(newAssetEntryTable); // Select asset category and route to asset entry form
         assets.dropdown(tonerTab); // Select from Toner Balance or Toner Transactions
         assets.selectCategory(hardwareCategory); // Select asset category & display asset table
-  
-        localStorage.setItem('navIndex', 2);
-        mainNav.activeNav(localStorage.getItem('navIndex'));
       } catch (error) {
       }
     })
   }
 
   // Event will only execute under /department route
-  if(window.location.pathname === '/department'){
+  if(window.location.pathname === '/department' || window.location.pathname.includes('/create-department')){
     document.addEventListener('DOMContentLoaded', () => { 
+
+      localStorage.setItem('navIndex', 3);
+      mainNav.activeNav(localStorage.getItem('navIndex'));
+
       try {
         const departmentTabs = document.querySelector('#departmentTabs');
         const newDepartmentBtn = document.querySelector('#newDepartment');
-        assets.show(departmentTabs);
         assets.dropdown(newDepartmentBtn);
-
-        localStorage.setItem('navIndex', 3);
-        mainNav.activeNav(localStorage.getItem('navIndex'));
+        assets.show(departmentTabs);
       } catch (error) {
+        console.log(error);
+      }
+    })
+  }
+
+
+  // Event will only execute under /department route
+  if(window.location.pathname === '/employees' || window.location.pathname.includes('/employees')){
+    document.addEventListener('DOMContentLoaded', () => { 
+
+      localStorage.setItem('navIndex', 4);
+      mainNav.activeNav(localStorage.getItem('navIndex'));
+
+      try {
+        const departmentTabs = document.querySelector('#newEmployeeBtn');
+      } catch (error) {
+        console.log(error);
       }
     })
   }

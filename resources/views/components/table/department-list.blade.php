@@ -1,4 +1,4 @@
-<div id="businessUnit" class="flex flex-col gap-1">
+<div id="departmentsTable" class="flex flex-col gap-1">
     {{-- Table Filter --}}
     <div class="flex justify-between bg-white p-2 rounded-md items-center">
 
@@ -23,34 +23,22 @@
     </div>
     
     {{-- Table --}}
-    <div id="businessUnitTableContainer" class="p-2 bg-white rounded-lg">
-        <table id="businessUnitTable" class="table-auto border border-collapse">
+    <div id="categories" class="p-2 bg-white rounded-lg">
+        <table id="departmentList" class="table-auto border border-collapse">
             <thead>
                 <tr class="">
                     <th class="border px-2 py-1">#</th>
-                    <th class="border px-2 py-1">BU Code</th>
-                    <th class="border px-2 py-1">BU Name</th>
-                    <th class="border px-2 py-1">Address</th>
+                    <th class="border px-2 py-1">Department Code</th>
+                    <th class="border px-2 py-1">Department Name</th>
+                    <th class="border px-2 py-1">Description</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td class="border px-2 py-1">1</td>
-                    <td class="border px-2 py-1">BU-1</td>
-                    <td class="border px-2 py-1">APC-Tarlac Layer Farm</td>
-                    <td class="border px-2 py-1">Brgy. Parsolingan, Gerona, Tarlac</td>
-                </tr>
-                <tr>
-                    <td class="border px-2 py-1">2</td>
-                    <td class="border px-2 py-1">BU-2</td>
-                    <td class="border px-2 py-1">APC-Tarlac Feedmill</td>
-                    <td class="border px-2 py-1">Brgy. Parsolingan, Gerona, Tarlac</td>
-                </tr>
-                <tr>
-                    <td class="border px-2 py-1">3</td>
-                    <td class="border px-2 py-1">BU-3</td>
-                    <td class="border px-2 py-1">APC-Tarlac Breeder Farm</td>
-                    <td class="border px-2 py-1">Brgy. San Agustin, Gerona, Tarlac</td>
+                    <td class="border px-2 py-1">DEPT-1-001</td>
+                    <td class="border px-2 py-1">Corporate Services - ISS</td>
+                    <td class="border px-2 py-1">Information Systems Services</td>
                 </tr>
             </tbody>
         </table>
