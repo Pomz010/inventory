@@ -1,4 +1,4 @@
-
+<div class="flex flex-col justify-center items-center">
     <div id="employeesTable" class="flex flex-col gap-1">
         {{-- Table Filter --}}
         <div class="flex justify-between bg-white p-2 rounded-md items-center">
@@ -26,7 +26,7 @@
         {{-- Table --}}
         <div id="employeeList" class="p-2 bg-white rounded-lg">
 
-            <table class="table-auto border border-collapse w-full">
+            <table class="table-auto border border-collapse">
                 <thead>
                 <tr class="">
                     <th class="border px-2 py-1">#</th>
@@ -66,3 +66,4 @@
         </div>
         
     </div>
+</div>

@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AssetController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\MovementController;
 use App\Http\Controllers\DepartmentController;
-use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,4 @@ Route::get('/department', [DepartmentController::class, 'show'])->name('departme
 Route::get('/create-department/{department}', [DepartmentController::class, 'create'])->name('create-department');
 Route::get('/employees', [EmployeeController::class, 'show'])->name('employees');
 Route::get('/create-employee', [EmployeeController::class, 'create'])->name('create-employee');
+Route::get('/users', [UserController::class, 'show'])->name('users');

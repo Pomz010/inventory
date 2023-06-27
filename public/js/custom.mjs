@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
   // Event will only execute under /department route
-  if(window.location.pathname === '/employees' || window.location.pathname.includes('/employees')){
+  if(window.location.pathname === '/employees' || window.location.pathname.includes('/create-employee')){
     document.addEventListener('DOMContentLoaded', () => { 
 
       localStorage.setItem('navIndex', 4);
@@ -101,5 +101,13 @@ document.addEventListener('DOMContentLoaded', e => {
       assets.dropdown(entryBtn);
     })
   }
+
+  if(window.location.pathname === '/users'){
+    document.addEventListener('DOMContentLoaded', () => { 
+      localStorage.setItem('navIndex', 5);
+      mainNav.activeNav(localStorage.getItem('navIndex'));
+    })
+  }
+
 
 

@@ -19,15 +19,18 @@ export default class Assets{
                 const tables = Array.from(tab.lastElementChild.children);
                 tables.forEach(table => {
                     tableName = table.innerText; // Gets the selected table name
+
                     if(tableName === 'Business Unit' || tableName === 'Department'){
                         console.log(localStorage.getItem('navIndex'));
                     } else {
                         table.addEventListener('click', e => {
+                            tableName = table.innerText; // Gets the selected table name when clicked
                             this.hide(tabs, tableName) // Hides the table that is not selected 
                             this.showTable(tableName); // Shows the table of the selected table name
                             e.preventDefault();
                         })
                     }
+
                 })
             } else {
                 tab.addEventListener('click', e => { // Runs when submenu is not a dropdown menu
@@ -238,7 +241,6 @@ export default class Assets{
 
     dropdown(hoveredTab){ // Hover dropdown menu feature
         hoveredTab.addEventListener('mouseover', e => {
-            console.log(hoveredTab);
             const dropdownContainer = hoveredTab.lastElementChild;
             const dropdownItems = Array.from(hoveredTab.lastElementChild.children);
 
