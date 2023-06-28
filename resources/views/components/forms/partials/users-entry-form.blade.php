@@ -1,3 +1,3 @@
 <li id='{{ $id }}' class="btnPadding btn static">
-    <span class="cursor-pointer">New Entry</span>
+    <a href="{{ route('create-user') }}">New Entry</a>
 </li>

@@ -1,5 +1,5 @@
 <x-main>
-    <div class="grid justify-center items-center">
+    <div class="w-4/12 mx-auto">
         @switch($asset)
             @case('laptop')
                 <x-forms.new-laptop />
@@ -47,6 +47,10 @@
 
             @case('others')
                 <x-forms.new-others />
+                @break
+
+            @case('toner-request')
+                <x-forms.new-toner-request />
                 @break
             @default
         @endswitch

@@ -17,7 +17,9 @@
               </div>
 
               <ul>
-                  <x-forms.partials.users-entry-form id="newUser" />
+                <li id='vendors' class="btnPadding btn static">
+                    <a href="{{ route('create-vendor') }}">New Entry</a>
+                </li>
               </ul>
             </form>
     
@@ -29,30 +31,25 @@
         
         {{-- Table --}}
         <div id="categories" class="p-2 bg-white rounded-lg">
-            <table id="departmentList" class="table-auto border border-collapse">
+            <table id="vendorsTable" class="table-auto border border-collapse">
                 <thead>
-                    <tr class="">
-                        <th class="border px-2 py-1">#</th>
-                        <th class="border px-2 py-1">Name</th>
-                        <th class="border px-2 py-1">Username</th>
-                        <th class="border px-2 py-1">Role</th>
-                        <th class="border px-2 py-1">Email</th>
-                        <th class="border px-2 py-1">Actions</th>
-                    </tr>
+                <tr class="">
+                    <th class="border px-2 py-1">#</th>
+                    <th class="border px-2 py-1">Name</th>
+                    <th class="border px-2 py-1">Address</th>
+                    <th class="border px-2 py-1">Mobile #</th>
+                    <th class="border px-2 py-1">Telephone</th>
+                    <th class="border px-2 py-1">Email</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="border px-2 py-1">1</td>
-                        <td class="border px-2 py-1">admin</td>
-                        <td class="border px-2 py-1">admin</td>
-                        <td class="border px-2 py-1">admin</td>
-                        <td class="border px-2 py-1">admin.it.assets@agripacific-corp.com</td>
-                        <td class="border px-2 py-1 flex gap-4">
-                            <span class="btn">reset</span>
-                            <span class="btn">delete</span>
-                            <span class="btn">disable</span>
-                        </td>
-                    </tr>
+                <tr>
+                    <td class="border px-2 py-1">1</td>
+                    <td class="border px-2 py-1">Cimetrix Enterprise</td>
+                    <td class="border px-2 py-1">Tarlac City</td>
+                    <td class="border px-2 py-1">09292512956</td>
+                    <td class="border px-2 py-1">045-982-3482</td>
+                    <td class="border px-2 py-1">cimetrix@cimetrix.com</td>
                 </tbody>
             </table>
         </div>

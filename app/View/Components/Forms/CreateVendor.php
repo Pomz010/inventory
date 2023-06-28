@@ -1,17 +1,17 @@
 <?php
 
-namespace App\View\Components\Forms\Partials;
+namespace App\View\Components\Forms;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class UsersEntryForm extends Component
+class CreateVendor extends Component
 {
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $id)
+    public function __construct()
     {
         //
     }
@@ -21,6 +21,6 @@ class UsersEntryForm extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.forms.partials.users-entry-form');
+        return view('components.forms.create-vendor');
     }
 }

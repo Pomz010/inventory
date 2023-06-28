@@ -109,5 +109,20 @@ document.addEventListener('DOMContentLoaded', e => {
     })
   }
 
+  if(window.location.pathname.includes('/create-user')){
+    document.addEventListener('DOMContentLoaded', () => { 
+      mainNav.activeNav(localStorage.getItem('navIndex'));
+    })
+  }
+
+  if(window.location.pathname === '/vendors' || window.location.pathname === '/create-vendor'){
+    document.addEventListener('DOMContentLoaded', () => { 
+      localStorage.setItem('navIndex', 6);
+      mainNav.activeNav(localStorage.getItem('navIndex'));
+    })
+  }
+
+
+
 
 

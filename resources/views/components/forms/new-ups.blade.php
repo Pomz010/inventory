@@ -1,14 +1,15 @@
-<div class="bg-neutral-300 h-auto p-4 rounded-md shadow-lg">
-    <div class="flex justify-between border-b border-slate-300 py-2 mb-2">
+<div class="formWrapper">
+    <div class="formHeader">
         <h2 class="font-bold">New UPS</h2>
         <ul>
             <x-forms.partials.asset-entry-form-container id="newEntry"/>
         </ul>
     </div>
     
-    <form class="grid grid-cols-2 gap-y-2 gap-x-4" action="#">
+    <form action="#">
         
-        <label class="font-semibold" for="laptopAssetTag">Asset Tag</label>
+        <div class="formInputWrapper">
+            <label class="font-semibold" for="laptopAssetTag">Asset Tag</label>
         <input id="laptopAssetTag" name="laptopAssetTag" type="text">
         
         <label class="font-semibold" for="brand">Brand</label>
@@ -37,5 +38,9 @@
 
         <label class="font-semibold" for="laptopPurchaseDate">Price</label>
         <input id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+        </div>
+
+        <x-forms.partials.button-set />
+        
     </form>
 </div>

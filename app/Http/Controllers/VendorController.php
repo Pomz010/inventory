@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class VendorController extends Controller
 {
     function show(){
         if(auth()->check()){
-            return view('components.nav-contents.users');
+            return view('components.nav-contents.vendors');
         } else {
             return redirect('/');
         }
@@ -16,8 +16,7 @@ class UserController extends Controller
 
     function create(){
         if(auth()->check()){
-            // $newUser = $user;
-            return view('components.forms.create-user');
+            return view('components.forms.create-vendor');
         } else {
             return redirect('/');
         }
