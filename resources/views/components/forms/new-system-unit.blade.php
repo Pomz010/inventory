@@ -1,9 +1,7 @@
 <div class="formWrapper">
     <div class="formHeader">
         <h2 class="font-bold">New System Unit</h2>
-        <ul>
-            <x-forms.partials.asset-entry-form-container id="newEntry"/>
-        </ul>
+        <x-forms.partials.asset-entry-form-container id="newEntry"/>
     </div>
     
     <form action="#">

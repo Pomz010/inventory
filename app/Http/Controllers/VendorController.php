@@ -21,4 +21,22 @@ class VendorController extends Controller
             return redirect('/');
         }
     }
+
+    function store(Request $request){
+        if(auth()->check()){
+            $vendor = $request->validate([
+                'vendorName' => 'required',
+                'vendorAddress' => 'required',
+                'vendorMobile' => 'required',
+                'vendorTelephone' => 'nullable',
+                'vendorEmail' => 'required'
+            ]);
+
+            
+
+            return view('components.forms.create-vendor');
+        } else {
+            return redirect('/');
+        }
+    }
 }

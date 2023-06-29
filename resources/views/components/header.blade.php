@@ -8,4 +8,4 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <div class="container-xl h-screen w-full overflow-y-hidden bg-slate-200">
+    <div class="container-xl h-screen w-full overflow-y-auto bg-slate-200">
