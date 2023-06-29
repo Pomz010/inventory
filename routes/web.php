@@ -36,6 +36,5 @@ Route::get('/users', [UserController::class, 'show'])->name('users');
 Route::get('/create-users', [UserController::class, 'create'])->name('create-user');
 
 Route::get('/vendors', [VendorController::class, 'show'])->name('vendors');
-Route::post('/vendors', [VendorController::class, 'store'])->name('vendors.store');
-
+Route::post('/create-vendor', [VendorController::class, 'store'])->name('vendors.store');
 Route::get('/create-vendor', [VendorController::class, 'create'])->name('create-vendor');
