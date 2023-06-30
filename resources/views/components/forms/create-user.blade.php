@@ -8,13 +8,13 @@
             <form class="grid grid-cols-2 gap-y-2 gap-x-4" action="#">
                 
                 <label class="font-semibold" for="laptopAssetTag">Name</label>
-                <input id="laptopAssetTag" name="laptopAssetTag" type="text">
+                <input class="col-span-2" id="laptopAssetTag" name="laptopAssetTag" type="text">
 
                 <label class="font-semibold" for="brand">Username</label>
-                <input id="laptopBrand" name="laptopBrand" type="text">
+                <input class="col-span-2" id="laptopBrand" name="laptopBrand" type="text">
 
                 <label class="font-semibold" for="userRole">Role</label>
-                <select name="userRole" id="userRole">
+                <select class="col-span-2" name="userRole" id="userRole">
                     <option value="admin">Admin</option>
                     <option value="user">User</option>
                     <option value="support">Support</option>
@@ -23,7 +23,7 @@
                 
 
                 <label class="font-semibold" for="laptopProcessor">Email</label>
-                <input id="laptopProcessor" name="laptopProcessor" type="Email">
+                <input class="col-span-2" id="laptopProcessor" name="laptopProcessor" type="Email">
 
             </form>
         </div>

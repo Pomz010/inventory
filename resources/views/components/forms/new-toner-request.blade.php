@@ -8,27 +8,27 @@
 
         <div class="formInputWrapper">
             <label class="font-semibold" for="dateRequested">Date</label>
-            <input id="dateRequested" name="dateRequested" type="date">
+            <input class="col-span-2" id="dateRequested" name="dateRequested" type="date">
             
             <label class="font-semibold" for="printerAssetCode">Asset Code</label>
-            <select name="printerAssetCode" id="printerAssetCode">
+            <select class="col-span-2" name="printerAssetCode" id="printerAssetCode">
                 <option value="xxxx">xxxx</option>
             </select>
 
             <label class="font-semibold" for="blackQty">Black</label>
-            <input id="blackQty" name="blackQty" type="number">
+            <input class="col-span-2" id="blackQty" name="blackQty" type="number">
 
             <label class="font-semibold" for="cyanQty">Cyan</label>
-            <input id="cyanQty" name="cyanQty" type="number">
+            <input class="col-span-2" id="cyanQty" name="cyanQty" type="number">
 
             <label class="font-semibold" for="magentaQty">Magenta</label>
-            <input id="magentaQty" name="magentaQty" type="number">
+            <input class="col-span-2" id="magentaQty" name="magentaQty" type="number">
 
             <label class="font-semibold" for="yellowQty">Yellow</label>
-            <input id="yellowQty" name="yellowQty" type="number">
+            <input class="col-span-2" id="yellowQty" name="yellowQty" type="number">
 
             <label class="font-semibold" for="requestedBy">Requested By</label>
-            <select name="requestedBy" id="requestedBy">
+            <select class="col-span-2" name="requestedBy" id="requestedBy">
                 <option value="xxxx">xxxx</option>
             </select>
         </div>

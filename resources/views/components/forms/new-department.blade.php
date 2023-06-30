@@ -8,10 +8,10 @@
         <form class="grid grid-cols-2 gap-y-2 gap-x-4" action="#">
             
             <label class="font-semibold" for="laptopAssetTag">Department Name</label>
-            <input id="laptopAssetTag" name="laptopAssetTag" type="text">
+            <input class="col-span-2" id="laptopAssetTag" name="laptopAssetTag" type="text">
     
             <label class="font-semibold" for="brand">Description</label>
-            <input id="laptopBrand" name="laptopBrand" type="text">
+            <input class="col-span-2" id="laptopBrand" name="laptopBrand" type="text">
     
         </form>
     </div>

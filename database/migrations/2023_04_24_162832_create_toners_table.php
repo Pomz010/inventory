@@ -15,9 +15,9 @@ class CreateTonersTable extends Migration
     {
         Schema::create('toners', function (Blueprint $table) {
             $table->id();
-            $table->string('printer_brand');
-            $table->string('printer_model');
-            $table->string('printer_type');
+            $table->string('brand');
+            $table->string('model');
+            $table->string('type');
             $table->string('cartridge_model');
             $table->string('output');
             $table->string('black');

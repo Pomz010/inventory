@@ -1,12 +1,13 @@
+
 <x-main>
 
     @if (session('success'))
-        <div>
+        <div class="grid justify-center pb-6">
             <p>{{ session('success') }}</p>
         </div>
     @endif
 
-    <div class="grid justify-center items-center">
+    <div class="grid  items-center w-4/12 mx-auto">
         <div class="formWrapper">
             <div class="formHeader">
                 <h2 class="font-bold">New Vendor</h2>
@@ -17,25 +18,45 @@
                 
                 <div class="formInputWrapper">
                     <label class="font-semibold" for="vendorName">Name</label>
-                    <div>
-                        <input class="w-full px-2" id="vendorName" name="vendor_name" type="text">
-                        @error('vendor_name')
-                            <p class="text-re"> {{ $message }}</p>
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="vendorName" name="name" type="text">
+                        @error('name')
+                            <p class="text-red-500"> {{ $message }}</p>
                         @enderror
                     </div>
 
     
                     <label class="font-semibold" for="vendorAddress">Address</label>
-                    <input class="w-full px-2" id="vendorAddress" name="vendor_address" type="text">
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="vendorAddress" name="address" type="text">
+                        @error('address')
+                            <p class="text-re"> {{ $message }}</p>
+                        @enderror
+                    </div>
     
                     <label class="font-semibold" for="vendorMobile">Mobile #</label>
-                    <input class="w-full px-2" id="vendorMobile" name="cellphone_#" type="text">
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="vendorMobile" name="phone" type="text">
+                        @error('phone')
+                        <p class="text-re"> {{ $message }}</p>
+                        @enderror
+                    </div>
                     
                     <label class="font-semibold" for="vendorTelephone">Telephone #</label>
-                    <input class="w-full px-2" id="vendorTelephone" name="telephone_#" type="Email">
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="vendorTelephone" name="telephone" type="text">
+                        @error('telephone')
+                            <p class="text-re"> {{ $message }}</p>
+                        @enderror
+                    </div>
     
                     <label class="font-semibold" for="vendorEmail">Email</label>
-                    <input class="w-full px-2" id="vendorEmail" name="vendor_email" type="Email">
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="vendorEmail" name="email" type="Email">
+                        @error('email')
+                            <p class="text-re"> {{ $message }}</p>
+                        @enderror
+                    </div>
                 </div>
 
                 <x-forms.partials.button-set />
