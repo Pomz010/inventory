@@ -1,4 +1,4 @@
-<div id="departmentsTable" class="flex flex-col gap-1">
+<div id="sectionsTable" class="flex flex-col gap-1">
     {{-- Table Filter --}}
     <div class="flex justify-between bg-white p-2 rounded-md items-center">
 
@@ -24,21 +24,21 @@
     
     {{-- Table --}}
     <div id="categories" class="p-2 bg-white rounded-lg">
-        <table id="departmentList" class="table-auto border border-collapse">
+        <table id="sectionList" class="table-auto border border-collapse">
             <thead>
                 <tr class="">
                     <th class="border px-2 py-1">#</th>
-                    <th class="border px-2 py-1">Department Code</th>
-                    <th class="border px-2 py-1">Department Name</th>
+                    <th class="border px-2 py-1">Section Code</th>
+                    <th class="border px-2 py-1">Section Name</th>
                     <th class="border px-2 py-1">Description</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td class="border px-2 py-1">1</td>
-                    <td class="border px-2 py-1">DEPT-1-001</td>
-                    <td class="border px-2 py-1">Corporate Services</td>
-                    <td class="border px-2 py-1"></td>
+                    <td class="border px-2 py-1">SEC-1-001</td>
+                    <td class="border px-2 py-1">ISS</td>
+                    <td class="border px-2 py-1">Information Systems Services</td>
                 </tr>
             </tbody>
         </table>

@@ -8,11 +8,11 @@
     
             <ul id="mainNav" class="flex text-white gap-x-2">
                 <li class="px-2"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="px-2"><a href="{{ route('show-assets') }}">Asset Monitoring</a></li>
-                <li class="px-2"><a href="{{ route('department') }}">Department</a></li>
+                <li class="px-2"><a href="{{ route('assets.index') }}">Asset Monitoring</a></li>
+                <li class="px-2"><a href="{{ route('department.index') }}">Department</a></li>
                 <li class="px-2"><a href="{{ route('employees') }}">Employee List</a></li>
                 <li class="px-2"><a href="{{ route('users') }}">Users</a></li>
-                <li class="px-2"><a href="{{ route('vendors') }}">Vendor</a></li>
+                <li class="px-2"><a href="{{ route('vendors.index') }}">Vendor</a></li>
                 <li class="px-2"><a href="#">Service Support</a></li>
             </ul> 
         </div>

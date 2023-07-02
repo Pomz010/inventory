@@ -1,3 +1,3 @@
 <x-main>
-    <x-table.vendors />
+    <x-table.vendors :vendors='$vendors' />
 </x-main>

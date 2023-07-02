@@ -3,6 +3,7 @@
         <ul id="departmentTabs" class="flex items-center">
             <li class="activeTab"><a href="#">Business Unit</a></li>
             <li class="btnPadding"><a href="#">Departments</a></li>
+            <li class="btnPadding"><a href="#">Section</a></li>
         </ul>
 
         <ul>
@@ -10,7 +11,8 @@
         </ul>
     </div>
     <div id="tableContainer" class="flex flex-col justify-center items-center">
-        <x-table.business-unit />
+        <x-table.business-unit :businessUnits="$businessUnits" />
         <x-table.department-list />
+        <x-table.section />
     </div>
 </x-main>

@@ -2,51 +2,51 @@
     <div class="w-4/12 mx-auto">
         @switch($asset)
             @case('laptop')
-                <x-forms.new-laptop />
+                <x-forms.new-laptop :vendors='$vendors' />
                 @break
 
             @case('system-unit')
-                <x-forms.new-system-unit />
+                <x-forms.new-system-unit :vendors='$vendors'/>
                 @break
 
             @case('monitor')
-                <x-forms.new-monitor />
+                <x-forms.new-monitor :vendors='$vendors'/>
                 @break
 
             @case('printer')
-                <x-forms.new-printer />
+                <x-forms.new-printer :vendors='$vendors'/>
                 @break
 
             @case('ups')
-                <x-forms.new-ups />
+                <x-forms.new-ups :vendors='$vendors'/>
                 @break
                 
             @case('router')
-                <x-forms.new-router />
+                <x-forms.new-router :vendors='$vendors'/>
                 @break
 
             @case('firewall')
-                <x-forms.new-firewall />
+                <x-forms.new-firewall :vendors='$vendors'/>
                 @break
 
             @case('switch')
-                <x-forms.new-switch />
+                <x-forms.new-switch :vendors='$vendors'/>
                 @break
 
             @case('access-point')
-                <x-forms.new-access-point />
+                <x-forms.new-access-point :vendors='$vendors'/>
                 @break
 
             @case('mobile-device')
-                <x-forms.new-mobile-device />
+                <x-forms.new-mobile-device :vendors='$vendors'/>
                 @break
 
             @case('software')
-                <x-forms.new-software />
+                <x-forms.new-software :vendors='$vendors'/>
                 @break
 
             @case('others')
-                <x-forms.new-others />
+                <x-forms.new-others :vendors='$vendors'/>
                 @break
 
             @case('toner-request')

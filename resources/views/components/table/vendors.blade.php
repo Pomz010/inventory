@@ -43,13 +43,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td class="border px-2 py-1">1</td>
-                    <td class="border px-2 py-1">Cimetrix Enterprise</td>
-                    <td class="border px-2 py-1">Tarlac City</td>
-                    <td class="border px-2 py-1">09292512956</td>
-                    <td class="border px-2 py-1">045-982-3482</td>
-                    <td class="border px-2 py-1">cimetrix@cimetrix.com</td>
+                    @php
+                        $counter = 1;
+                    @endphp
+                    @foreach($vendors as $vendor)
+                        <tr>
+                            <td class="border px-2 py-1">{{ $counter++ }}</td>
+                            <td class="border px-2 py-1">{{ ucwords($vendor->name) }}</td>
+                            <td class="border px-2 py-1">{{ ucwords($vendor->address) }}</td>
+                            <td class="border px-2 py-1">{{ $vendor->phone }}</td>
+                            <td class="border px-2 py-1">{{ $vendor->telephone }}</td>
+                            <td class="border px-2 py-1">{{ $vendor->email }}</td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

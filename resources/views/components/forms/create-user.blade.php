@@ -1,29 +1,36 @@
 <x-main>
-    <div class="grid justify-center items-center">
-        <div class="bg-neutral-300 h-auto p-4 rounded-md shadow-lg">
-            <div class="flex justify-between border-b border-slate-300 py-2 mb-2">
+    <div class="grid items-center w-3/12 mx-auto">
+        <div class="formWrapper">
+            <div class="formHeader">
                 <h2 class="font-bold">New User</h2>
             </div>
 
-            <form class="grid grid-cols-2 gap-y-2 gap-x-4" action="#">
-                
-                <label class="font-semibold" for="laptopAssetTag">Name</label>
-                <input class="col-span-2" id="laptopAssetTag" name="laptopAssetTag" type="text">
+            <form action="#" method="POST">
+                @csrf
 
-                <label class="font-semibold" for="brand">Username</label>
-                <input class="col-span-2" id="laptopBrand" name="laptopBrand" type="text">
+                <div class="formInputWrapper">
+                    <label class="font-semibold" for="userName">Name</label>
+                    <select class="col-span-2" id="userName" name="name"> 
+                        <option value="rolly Castillo">Rolly Castillo</option>
+                    </select>
 
-                <label class="font-semibold" for="userRole">Role</label>
-                <select class="col-span-2" name="userRole" id="userRole">
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
-                    <option value="support">Support</option>
-                    <option value="email">Customer</option>
-                </select>
-                
+                    <label class="font-semibold" for="username">Username</label>
+                    <input class="col-span-2" id="username" name="username" type="text">
 
-                <label class="font-semibold" for="laptopProcessor">Email</label>
-                <input class="col-span-2" id="laptopProcessor" name="laptopProcessor" type="Email">
+                    <label class="font-semibold" for="userRole">Role</label>
+                    <select class="col-span-2" name="userRole" id="userRole">
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                        <option value="support">Support</option>
+                        <option value="email">Customer</option>
+                    </select>
+                    
+
+                    <label class="font-semibold" for="userEmail">Email</label>
+                    <input class="col-span-2" id="userEmail" name="email" type="Email">
+                </div>
+
+                <x-forms.partials.button-set />
 
             </form>
         </div>

@@ -6,16 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class NewSystemUnit extends Component
+class NewSection extends Component
 {
     /**
      * Create a new component instance.
      */
-    public $vendors;
-    
-    public function __construct($vendors)
+    public function __construct()
     {
-        $this->vendors = $vendors;
+        //
     }
 
     /**
@@ -23,6 +21,6 @@ class NewSystemUnit extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.forms.new-system-unit');
+        return view('components.forms.new-section');
     }
 }

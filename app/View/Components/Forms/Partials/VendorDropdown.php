@@ -1,18 +1,18 @@
 <?php
 
-namespace App\View\Components\Forms;
+namespace App\View\Components\Forms\Partials;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class NewSystemUnit extends Component
+class VendorDropdown extends Component
 {
     /**
      * Create a new component instance.
      */
     public $vendors;
-    
+
     public function __construct($vendors)
     {
         $this->vendors = $vendors;
@@ -23,6 +23,6 @@ class NewSystemUnit extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.forms.new-system-unit');
+        return view('components.forms.partials.vendor-dropdown');
     }
 }

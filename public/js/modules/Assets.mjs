@@ -105,6 +105,12 @@ export default class Assets{
                 this.hideTable(visibleTable);
                 break;
 
+            case 'Section':
+                visibleTable = document.querySelector('#sectionsTable');
+                visibleTable.classList.remove('hidden');
+                this.hideTable(visibleTable);
+                break;
+
             case 'all-assets':
                 visibleTable = document.querySelector('#assetsTable');
                 categories.forEach(category => {

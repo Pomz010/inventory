@@ -31,27 +31,23 @@
                     <th class="border px-2 py-1">BU Code</th>
                     <th class="border px-2 py-1">BU Name</th>
                     <th class="border px-2 py-1">Address</th>
+                    <th class="border px-2 py-1">Description</th>
                 </tr>
             </thead>
             <tbody>
+                @php
+                    $counter = 1;   
+                @endphp
+                @foreach ($businessUnits as $businessUnit)
+
                 <tr>
-                    <td class="border px-2 py-1">1</td>
-                    <td class="border px-2 py-1">BU-1</td>
-                    <td class="border px-2 py-1">APC-Tarlac Layer Farm</td>
-                    <td class="border px-2 py-1">Brgy. Parsolingan, Gerona, Tarlac</td>
+                    <td class="border px-2 py-1">{{ $counter++ }}</td>
+                    <td class="border px-2 py-1">{{ strtoupper($businessUnit->code) }}</td>
+                    <td class="border px-2 py-1">{{ ucwords($businessUnit->name) }}</td>
+                    <td class="border px-2 py-1">{{ ucwords($businessUnit->address) }}</td>
+                    <td class="border px-2 py-1">{{ ucwords($businessUnit->description) }}</td>
                 </tr>
-                <tr>
-                    <td class="border px-2 py-1">2</td>
-                    <td class="border px-2 py-1">BU-2</td>
-                    <td class="border px-2 py-1">APC-Tarlac Feedmill</td>
-                    <td class="border px-2 py-1">Brgy. Parsolingan, Gerona, Tarlac</td>
-                </tr>
-                <tr>
-                    <td class="border px-2 py-1">3</td>
-                    <td class="border px-2 py-1">BU-3</td>
-                    <td class="border px-2 py-1">APC-Tarlac Breeder Farm</td>
-                    <td class="border px-2 py-1">Brgy. San Agustin, Gerona, Tarlac</td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

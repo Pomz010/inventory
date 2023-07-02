@@ -12,7 +12,6 @@
             <li><a class="newEntryCategory" href="{{ route('create-asset', ['asset' => 'switch']) }}">Switch</a></li>
             <li><a class="newEntryCategory" href="{{ route('create-asset', ['asset' => 'access-point']) }}">Access Point</a></li>
             <li><a class="newEntryCategory" href="{{ route('create-asset', ['asset' => 'mobile-device']) }}">Mobile Device</a></li>
-            <li><a class="newEntryCategory" href="{{ route('create-asset', ['asset' => 'software']) }}">Software</a></li>
             <li><a class="newEntryCategory" href="{{ route('create-asset', ['asset' => 'others']) }}">Others</a></li>
             <li><a class="newEntryCategory" href="{{ route('create-asset', ['asset' => 'software']) }}">Software</a></li>
             <li><a class="newEntryCategory hover:rounded-b-md" href="{{ route('create-asset', ['asset' => 'toner-request']) }}">Toner Request</a></li>

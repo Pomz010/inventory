@@ -34,10 +34,7 @@
             <label class="font-semibold" for="systemUnitGPU">Graphics Card</label>
             <input class="col-span-2" id="systemUnitGPU" name="systemUnitGPU" type="text">
 
-            <label class="font-semibold" for="vendor">Vendor</label>
-            <select class="col-span-2" name="vendor" id="vendor">
-                <option value="xxxx">Cimetrix Enterprise</option>
-            </select>
+            <x-forms.partials.vendor-dropdown :vendors='$vendors' />
 
             <label class="font-semibold" for="systemUnitPurchaseDate">Date Purchased</label>
             <input class="col-span-2" id="systemUnitPurchaseDate" name="systemUnitPurchaseDate" type="date">

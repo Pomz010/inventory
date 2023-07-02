@@ -28,8 +28,7 @@
             <label class="font-semibold" for="laptopModel">Serial #</label>
             <input class="col-span-2" id="laptopModel" name="laptopModel" type="text">
 
-            <label class="font-semibold" for="laptopModel">Vendor</label>
-            <input class="col-span-2" id="laptopModel" name="laptopModel" type="text">
+            <x-forms.partials.vendor-dropdown :vendors='$vendors' />
 
             <label class="font-semibold" for="laptopModel">Ownership</label>
             <input class="col-span-2" id="laptopModel" name="laptopModel" type="text">

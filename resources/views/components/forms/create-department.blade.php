@@ -1,5 +1,5 @@
 <x-main>
-    <div class="grid justify-center items-center">
+    <div class="grid items-center w-3/12 mx-auto">
         @switch($department)
             @case('business-unit')
                 <x-forms.new-business-unit />
@@ -7,6 +7,10 @@
 
             @case('department')
                 <x-forms.new-department />
+                @break
+
+            @case('section')
+                <x-forms.new-section />
                 @break
 
             @default

@@ -1,18 +1,52 @@
-<div class="grid justify-center items-center h-screen">
-    <div class="bg-neutral-300 h-auto p-4 rounded-md shadow-lg">
-        <div class="flex justify-between border-b border-slate-300 py-2 mb-2">
+@if (session('success'))
+    <div class="grid justify-center pb-6">
+        <p>{{ session('success') }}</p>
+    </div>
+@endif
+
+    <div class="formWrapper">
+        <div class="formHeader">
             <h2 class="font-bold">New Business Unit</h2>
             <x-forms.partials.department-entry-form id="newDepartment"/>
         </div>
     
-        <form class="grid grid-cols-2 gap-y-2 gap-x-4" action="#">
+        <form action="{{ route('business-unit.store') }}" method="POST">
+            @csrf
             
-            <label class="font-semibold" for="laptopAssetTag">BU Name</label>
-            <input class="col-span-2" id="laptopAssetTag" name="laptopAssetTag" type="text">
-    
-            <label class="font-semibold" for="brand">BU Address</label>
-            <input class="col-span-2" id="laptopBrand" name="laptopBrand" type="text">
-    
+            <div class="formInputWrapper">
+                <label class="font-semibold" for="buCode">Code</label>
+                <div class="col-span-2">
+                    <input class="w-full px-2" id="buCode" name="code" type="text" value="{{ $errors->has('code') ? old('') : old('code') }}">
+                    @error('code')
+                        <p class="text-red-500"> {{ $message }}</p>
+                    @enderror
+                </div>
+
+                <label class="font-semibold" for="buName">Name</label>
+                <div class="col-span-2">
+                    <input class="w-full px-2" id="buName" name="name" type="text" value="{{ $errors->has('name') ? old('') : old('name') }}">
+                    @error('name')
+                        <p class="text-red-500"> {{ $message }}</p>
+                    @enderror
+                </div>
+
+                <label class="font-semibold" for="buAddress">Address</label>
+                <div class="col-span-2">
+                    <input class="w-full px-2" id="buAddress" name="address" type="text" value="{{ $errors->has('address') ? old('') : old('address') }}">
+                    @error('address')
+                        <p class="text-red-500"> {{ $message }}</p>
+                    @enderror
+                </div>
+
+                <label class="font-semibold" for="buDescription">Description</label>
+                <div class="col-span-2">
+                    <input class="w-full px-2" id="buDescription" name="description" type="text" value="{{ $errors->has('description') ? old('') : old('description') }}">
+                    @error('description')
+                        <p class="text-red-500"> {{ $message }}</p>
+                    @enderror
+                </div>
+            </div>
+
+            <x-forms.partials.button-set />
         </form>
     </div>
-</div>

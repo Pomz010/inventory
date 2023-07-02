@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BusinessUnit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class DepartmentController extends Controller
 {
-    function show(){
+    function index(){
         if(auth()->check()){
-            return view('components.nav-contents.departments');
+            Session::put('previousPage', request()->fullUrl());
+            $businessUnits = BusinessUnit::all();
+            return view('components.nav-contents.departments', compact('businessUnits'));
         } else {
             return redirect('/');
         }

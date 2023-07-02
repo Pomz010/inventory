@@ -22,8 +22,7 @@
             <label class="font-semibold" for="laptopSerial">IP Address</label>
             <input class="col-span-2" id="laptopSerial" name="laptopSerial" type="text">
 
-            <label class="font-semibold" for="laptopSerial">Vendor</label>
-            <input class="col-span-2" id="laptopSerial" name="laptopSerial" type="text">
+            <x-forms.partials.vendor-dropdown :vendors='$vendors' />
 
             <label class="font-semibold" for="laptopPurchaseDate">Date Purchased</label>
             <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="date">

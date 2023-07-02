@@ -1,21 +1,19 @@
 <?php
 
-namespace App\View\Components\Forms;
+namespace App\View\Components\Table;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class NewSystemUnit extends Component
+class Section extends Component
 {
     /**
      * Create a new component instance.
      */
-    public $vendors;
-    
-    public function __construct($vendors)
+    public function __construct()
     {
-        $this->vendors = $vendors;
+        //
     }
 
     /**
@@ -23,6 +21,6 @@ class NewSystemUnit extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.forms.new-system-unit');
+        return view('components.table.section');
     }
 }

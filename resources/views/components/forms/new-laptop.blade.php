@@ -40,13 +40,10 @@
             <label class="font-semibold" for="laptopHostname">Hostname</label>
             <input class="col-span-2" id="laptopHostname" name="laptopHostname" type="text">
     
-            <label class="font-semibold" for="laptopVendor">Vendor</label>
-            <select class="col-span-2" name="laptopVendor" id="laptopVendor">
-                <option value="Cimetrix">Cimetrix Enterprise</option>
-            </select>
+            <x-forms.partials.vendor-dropdown :vendors='$vendors' />
     
             <label class="font-semibold" for="laptopPurchaseDate">Date Purchased</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="date">
+            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="date" value="{{ now()->format('Y-m-d') }}">
     
             <label class="font-semibold" for="laptopWarrantyExpiration">Warranty Expiration</label>
             <input class="col-span-2" id="laptopWarrantyExpiration" name="laptopWarrantyExpiration" type="date">
