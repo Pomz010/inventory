@@ -38,8 +38,8 @@
                 @php
                     $counter = 1;   
                 @endphp
+                
                 @foreach ($businessUnits as $businessUnit)
-
                 <tr>
                     <td class="border px-2 py-1">{{ $counter++ }}</td>
                     <td class="border px-2 py-1">{{ strtoupper($businessUnit->code) }}</td>

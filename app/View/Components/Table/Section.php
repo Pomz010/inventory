@@ -11,9 +11,10 @@ class Section extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $sections;
+    public function __construct($sections)
     {
-        //
+        $this->sections = $sections;
     }
 
     /**

@@ -34,12 +34,18 @@
                 </tr>
             </thead>
             <tbody>
+                @php
+                    $counter = 1;
+                @endphp
+
+                @foreach ($sections as $section )
                 <tr>
-                    <td class="border px-2 py-1">1</td>
-                    <td class="border px-2 py-1">SEC-1-001</td>
-                    <td class="border px-2 py-1">ISS</td>
-                    <td class="border px-2 py-1">Information Systems Services</td>
+                    <td class="border px-2 py-1">{{ $counter++ }}</td>
+                    <td class="border px-2 py-1">{{ $section->code }}</td>
+                    <td class="border px-2 py-1">{{ $section->name }}</td>
+                    <td class="border px-2 py-1">{{ $section->description }}</td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

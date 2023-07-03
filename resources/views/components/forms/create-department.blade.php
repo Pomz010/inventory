@@ -1,5 +1,5 @@
 <x-main>
-    <div class="grid items-center w-3/12 mx-auto">
+    <div class="grid items-center w-4/12 mx-auto">
         @switch($department)
             @case('business-unit')
                 <x-forms.new-business-unit />

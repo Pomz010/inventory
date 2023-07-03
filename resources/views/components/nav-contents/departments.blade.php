@@ -11,8 +11,8 @@
         </ul>
     </div>
     <div id="tableContainer" class="flex flex-col justify-center items-center">
-        <x-table.business-unit :businessUnits="$businessUnits" />
-        <x-table.department-list />
-        <x-table.section />
+        <x-table.business-unit :businessUnits='$businessUnits' />
+        <x-table.department-list :departments='$departments'/>
+        <x-table.section :sections='$sections' />
     </div>
 </x-main>

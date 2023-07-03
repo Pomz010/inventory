@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\Department;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AssetController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\VendorController;
+use App\Http\Controllers\SectionController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\MovementController;
@@ -43,4 +45,8 @@ Route::get('/vendors', [VendorController::class, 'index'])->name('vendors.index'
 Route::post('/create-vendor', [VendorController::class, 'store'])->name('vendors.store');
 Route::get('/create-vendor', [VendorController::class, 'create'])->name('create-vendor');
 
-Route::post('/create-department', [BusinessUnitController::class, 'store'])->name('business-unit.store');
+Route::post('/department', [BusinessUnitController::class, 'store'])->name('business-unit.store');
+// Route::get('/department', [BusinessUnitController::class, 'index'])->name('business-unit.index');
+// Route::get('/department', [DepartmentController::class, 'index'])->name('department.index');
+Route::post('/department', [SectionController::class, 'store'])->name('section.store');
+// Route::get('/department', [SectionController::class, 'index'])->name('section.index');

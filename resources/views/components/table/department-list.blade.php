@@ -34,12 +34,18 @@
                 </tr>
             </thead>
             <tbody>
+                @php
+                    $counter = 1;
+                @endphp
+
+                @foreach ($departments as $department)
                 <tr>
-                    <td class="border px-2 py-1">1</td>
-                    <td class="border px-2 py-1">DEPT-1-001</td>
-                    <td class="border px-2 py-1">Corporate Services</td>
-                    <td class="border px-2 py-1"></td>
+                    <td class="border px-2 py-1">{{ $counter++ }}</td>
+                    <td class="border px-2 py-1">{{ ucwords($department->code) }}</td>
+                    <td class="border px-2 py-1">{{ ucwords($department->name) }}</td>
+                    <td class="border px-2 py-1">{{ ucwords($department->description) }}</td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

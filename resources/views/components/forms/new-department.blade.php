@@ -1,3 +1,8 @@
+@if (session('success'))
+    <div class="grid justify-center pb-6">
+        <p>{{ session('success') }}</p>
+    </div>
+@endif
 
     <div class="formWrapper">
         <div class="formHeader">
@@ -5,23 +10,29 @@
             <x-forms.partials.department-entry-form id="newDepartment" />
         </div>
     
-        <form action="#" method="POST">
+        <form action="{{ route('department.store') }}" method="POST">
             @csrf
             
             <div class="formInputWrapper">
-                <label class="font-semibold" for="laptopAssetTag">Department Code</label>
+                <label class="font-semibold" for="departmentCode">Department Code</label>
                 <div class="col-span-2">
-                    <input class="w-full px-2" id="laptopAssetTag" name="laptopAssetTag" type="text">
+                    <input class="w-full px-2" id="departmentCode" name="code" type="text" value="{{ $errors->has('code') ? old('') : old('code'); }}" >
+                    @error('code')
+                    <p class="text-red-500"> {{ $message }}</p>
+                    @enderror
                 </div>
 
-                <label class="font-semibold" for="laptopAssetTag">Department Name</label>
+                <label class="font-semibold" for="departmentName">Department Name</label>
                 <div class="col-span-2">
-                    <input class="w-full px-2" id="laptopAssetTag" name="laptopAssetTag" type="text">
+                    <input class="w-full px-2" id="departmentName" name="name" type="text" value="{{ $errors->has('name') ? old('') : old('name'); }}" >
+                    @error('name')
+                        <p class="text-red-500"> {{ $message }}</p>
+                    @enderror
                 </div>
 
-                <label class="font-semibold" for="brand">Description</label>
+                <label class="font-semibold" for="description">Description</label>
                 <div class="col-span-2">
-                    <input class="w-full px-2" id="laptopBrand" name="laptopBrand" type="text">
+                    <input class="w-full px-2" id="description" name="description" type="text">
                 </div>
             </div>
 
