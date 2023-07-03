@@ -36,13 +36,10 @@ class VendorController extends Controller
             'address' => ['required','max:255'],
             'phone' => ['nullable', 'digits:11', Rule::unique('vendors', 'phone')],
             'telephone' => ['nullable', 'regex:/^\d{3}-\d{7}$/'],
-            'email' => ['nullable', 'email', 'email:rfc,dns']
+            'email' => ['nullable', 'email', 'email:rfc,dns', Rule::unique('vendors', 'email')]
         ]);
 
         $data = array_map('strtolower', $vendor);
-
-
-        // dd($vendor);
 
         Vendor::create($data);
 

@@ -1,11 +1,16 @@
+@if (session('success'))
+    <div class="grid justify-center pb-6">
+        <p>{{ session('success') }}</p>
+    </div>
+@endif
 
 <div class="formWrapper">
     <div class="formHeader">
         <h2 class="font-bold">New Section</h2>
-        <x-forms.partials.department-entry-form id="newSection" />
+        <x-forms.partials.department-entry-form id="newDepartment" />
     </div>
 
-    <form action="{{ route('section.store') }}" method="POST">
+    <form action="#" method="POST">
         @csrf
         
         <div class="formInputWrapper">

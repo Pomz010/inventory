@@ -14,64 +14,56 @@
                         <input class="w-full px-2" id="employeeID" name="employee_id" type="text">
                     </div>
                     
-                    <label class="font-semibold" for="businessUnit">BU</label>
-                    <select class="col-span-2">
-                        <option id="businessUnit" name="business_unit" value=""></option>
-                    </select>
+                    <x-forms.partials.business-unit-dropdown :businessUnits='$businessUnits'/>
 
-                    <label class="font-semibold" for="department">Department</label>
-                    <select class="col-span-2">
-                        <option id="department" name="department" value=""></option>
-                    </select>
+                    <x-forms.partials.department-dropdown :departments='$departments' />
                     
-                    <label class="font-semibold" for="section">Section</label>
-                    <select class="col-span-2">
-                        <option id="section" name="section" value=""></option>
+                    <x-forms.partials.section-dropdown :sections='$sections' />
+
+                    <label class="font-semibold" for="employeeFirstname">Firstname</label>
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="employeeFirstname" name="firstname" type="text">
+                    </div>
+
+                    <label class="font-semibold" for="employeeLastname">Lastname</label>
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="employeeLastname" name="lastname" type="text">
+                    </div>
+
+                    <label class="font-semibold" for="employeeMiddleName">Middle name</label>
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="employeeMiddleName" name="middle_name" type="text">
+                    </div>
+
+                    <label class="font-semibold" for="employeeExtensionName">Extenstion Name</label>
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="employeeExtensionName" name="ext_name" type="text">
+                    </div>
+
+                    <label class="font-semibold" for="employeeGender">Gender</label>
+                    <select class="col-span-2" id="employeeGender" name="gender">
+                        <option value="m">male</option>
+                        <option value="f">female</option>
                     </select>
 
-                    <label class="font-semibold" for="laptopProcessor">Firstname</label>
+                    <label class="font-semibold" for="employeePosition">Position</label>
                     <div class="col-span-2">
-                        <input class="w-full px-2" id="laptopProcessor" name="laptopProcessor" type="text">
+                        <input class="w-full px-2" id="employeePosition" name="position" type="text">
+                    </div>
+                    
+                    <label class="font-semibold" for="employeeDateHired">Date Hired</label>
+                    <div class="col-span-2">
+                        <input class="w-full px-2" id="employeeDateHired" name="date_hired" type="date">
                     </div>
 
-                    <label class="font-semibold" for="laptopMemory">Lastname</label>
+                    <label class="font-semibold" for="employementStatus">Employment Status</label>
                     <div class="col-span-2">
-                        <input class="w-full px-2" id="laptopMemory" name="laptopMemory" type="text">
+                        <input class="w-full px-2" id="employementStatus" name="employment_status" type="text">
                     </div>
 
-                    <label class="font-semibold" for="laptopStorage">Middle name</label>
+                    <label class="font-semibold" for="employeeEmail">Email</label>
                     <div class="col-span-2">
-                        <input class="w-full px-2" id="laptopStorage" name="laptopStorage" type="text">
-                    </div>
-
-                    <label class="font-semibold" for="graphicsCard">Extenstion Name</label>
-                    <div class="col-span-2">
-                        <input class="w-full px-2" id="graphicsCard" name="graphicsCard" type="text">
-                    </div>
-
-                    <label class="font-semibold" for="gender">Gender</label>
-                    <select class="col-span-2">
-                        <option id="gender" name="gender" value=""></option>
-                    </select>
-
-                    <label class="font-semibold" for="laptopSerial">Position</label>
-                    <div class="col-span-2">
-                        <input class="w-full px-2" id="laptopSerial" name="laptopSerial" type="text">
-                    </div>
-
-                    <label class="font-semibold" for="laptopSerial">Email</label>
-                    <div class="col-span-2">
-                        <input class="w-full px-2" id="laptopSerial" name="laptopSerial" type="text">
-                    </div>
-
-                    <label class="font-semibold" for="laptopSerial">Date Hired</label>
-                    <div class="col-span-2">
-                        <input class="w-full px-2" id="laptopSerial" name="laptopSerial" type="date">
-                    </div>
-
-                    <label class="font-semibold" for="laptopModel">Employment Status</label>
-                    <div class="col-span-2">
-                        <input class="w-full px-2" id="laptopModel" name="laptopModel" type="text">
+                        <input class="w-full px-2" id="employeeEmail" name="email" type="text">
                     </div>
                 </div>
 

@@ -16,14 +16,17 @@ class CreateEmployeesTable extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('employee_id')->unique();
-            $table->foreignId('department_id')->constrained();
+            $table->foreignId('business_units_id')->constrained();
+            $table->foreignId('departments_id')->constrained();
+            $table->foreignId('sections_id')->constrained();
             $table->string('firstname');
             $table->string('lastname');
             $table->string('middle_name');
             $table->string('ext_name')->nullable();
             $table->string('gender');
             $table->string('position');
-            $table->string('role');
+            $table->date('date_hired');
+            $table->string('employment_status');
             $table->string('email')->unique();
             $table->timestamps();
         });

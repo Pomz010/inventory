@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\Forms;
+namespace App\View\Components\Forms\Partials;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class NewBusinessUnit extends Component
+class BusinessUnitDropdown extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class NewBusinessUnit extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.forms.new-business-unit');
+        return view('components.forms.partials.business-unit-dropdown');
     }
 }

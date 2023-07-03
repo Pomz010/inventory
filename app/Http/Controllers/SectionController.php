@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 
 class SectionController extends Controller
 {
-    function index(){
+    public function index(){
         if(auth()->check()){
             Session::put('previousPage', request()->fullUrl());
             // $departments = Department::all();
@@ -21,7 +21,7 @@ class SectionController extends Controller
         }
     }
     
-    function store(Request $request){
+    public function store(Request $request){
         if(auth()->check()){
             $newSection = $request->validate([
                 'code' => ['required', 'string', 'max:255', Rule::unique('departments', 'code')],

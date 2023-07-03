@@ -1,7 +1,6 @@
 import UserMenu from "./modules/UserMenu.mjs"
 import Assets from "./modules/Assets.mjs";
 import MainNav from "./modules/MainNav.mjs";
-// import Helper from "./modules/helper.mjs";
 
 
   const assets = new Assets();

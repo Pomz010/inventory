@@ -35,8 +35,8 @@ Route::get('/assets', [AssetController::class, 'index'])->name('assets.index');
 Route::get('/create-asset/{asset}', [AssetController::class, 'create'])->name('create-asset');
 Route::get('/create-hardware', [HardwareController::class, 'create'])->name('hardware');
 Route::get('/department', [DepartmentController::class, 'index'])->name('department.index');
-Route::get('/create-department/{department}', [DepartmentController::class, 'create'])->name('create-department');
-Route::get('/employees', [EmployeeController::class, 'show'])->name('employees');
+
+Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
 Route::get('/create-employee', [EmployeeController::class, 'create'])->name('create-employee');
 Route::get('/users', [UserController::class, 'show'])->name('users');
 Route::get('/create-users', [UserController::class, 'create'])->name('create-user');
@@ -45,8 +45,7 @@ Route::get('/vendors', [VendorController::class, 'index'])->name('vendors.index'
 Route::post('/create-vendor', [VendorController::class, 'store'])->name('vendors.store');
 Route::get('/create-vendor', [VendorController::class, 'create'])->name('create-vendor');
 
-Route::post('/department', [BusinessUnitController::class, 'store'])->name('business-unit.store');
-// Route::get('/department', [BusinessUnitController::class, 'index'])->name('business-unit.index');
-// Route::get('/department', [DepartmentController::class, 'index'])->name('department.index');
-Route::post('/department', [SectionController::class, 'store'])->name('section.store');
-// Route::get('/department', [SectionController::class, 'index'])->name('section.index');
+Route::get('/create-department/{department}', [DepartmentController::class, 'create'])->name('create-department');
+Route::post('/create-department/business-unit', [BusinessUnitController::class, 'store'])->name('business-unit.store');
+Route::post('/create-department/department', [DepartmentController::class, 'store'])->name('department.store');
+Route::post('/create-department/section', [SectionController::class, 'store'])->name('section.store');

@@ -5,8 +5,11 @@
     </div>
 
     <form action="#">
+        @csrf
 
         <div class="formInputWrapper">
+            <input class="col-span-2 hidden" id="laptopAssetTag" name="laptopAssetTag" type="text">
+
             <label class="font-semibold" for="laptopAssetTag">Asset Tag</label>
             <input class="col-span-2" id="laptopAssetTag" name="laptopAssetTag" type="text">
     

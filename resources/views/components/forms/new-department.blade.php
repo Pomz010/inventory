@@ -10,7 +10,7 @@
             <x-forms.partials.department-entry-form id="newDepartment" />
         </div>
     
-        <form action="{{ route('department.store') }}" method="POST">
+        <form action="#" method="POST">
             @csrf
             
             <div class="formInputWrapper">
