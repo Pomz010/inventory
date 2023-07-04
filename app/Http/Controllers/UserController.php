@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
-    function show(){
+    function index(){
         if(auth()->check()){
+            Session::put('previousPage', request()->fullUrl());
+            
             return view('components.nav-contents.users');
         } else {
             return redirect('/');
@@ -16,8 +20,8 @@ class UserController extends Controller
 
     function create(){
         if(auth()->check()){
-            // $newUser = $user;
-            return view('components.forms.create-user');
+            $employees = Employee::all();
+            return view('components.forms.create-user', compact('employees'));
         } else {
             return redirect('/');
         }

@@ -11,9 +11,16 @@ class Employee extends Model
 
     protected $fillable = [
         'employee_id',
-        'business_unit_id',
-        'department_id',
-        'section_id',
+        'business_units_id',
+        'departments_id',
+        'sections_id',
+        'firstname',
+        'lastname',
+        'middle_name',
+        'ext_name',
+        'gender',
+        'position',
+        'date_hired',
         'email'
     ];
 }

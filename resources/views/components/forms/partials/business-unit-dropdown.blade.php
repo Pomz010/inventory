@@ -1,6 +1,11 @@
 <label class="font-semibold" for="businessUnit">BU</label>
-<select class="col-span-2">
-    @foreach ($businessUnits as $businessUnit)
-        <option id="businessUnit" name="business_unit_id" value="{{ $businessUnit->id }}">{{ $businessUnit->name }}</option>
-    @endforeach
-</select>
+<div class="col-span-2">
+    <select class="w-full" id="businessUnit" name="business_units_id">
+        @foreach ($businessUnits as $businessUnit)
+            <option value="{{ $businessUnit->id }}">{{ strtoupper($businessUnit->name) }}</option>
+        @endforeach
+    </select>
+    @error('business_unit_id')
+        <p class="text-red-500"> {{ $message }}</p>
+    @enderror
+</div>

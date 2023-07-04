@@ -38,7 +38,8 @@ Route::get('/department', [DepartmentController::class, 'index'])->name('departm
 
 Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
 Route::get('/create-employee', [EmployeeController::class, 'create'])->name('create-employee');
-Route::get('/users', [UserController::class, 'show'])->name('users');
+Route::post('/create-employee', [EmployeeController::class, 'store'])->name('create-employee.store');
+Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/create-users', [UserController::class, 'create'])->name('create-user');
 
 Route::get('/vendors', [VendorController::class, 'index'])->name('vendors.index');

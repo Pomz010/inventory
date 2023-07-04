@@ -11,9 +11,10 @@ class BusinessUnitDropdown extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $businessUnits;
+    public function __construct($businessUnits)
     {
-        //
+        $this->businessUnits = $businessUnits;
     }
 
     /**

@@ -31,7 +31,7 @@
         
         {{-- Table --}}
         <div id="categories" class="p-2 bg-white rounded-lg">
-            <table id="vendorsTable" class="table-auto border border-collapse">
+            <table id="vendorsTable" class="table-auto border border-collapse w-full">
                 <thead>
                 <tr class="">
                     <th class="border px-2 py-1">#</th>

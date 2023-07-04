@@ -11,7 +11,9 @@
                 <div class="formInputWrapper">
                     <label class="font-semibold" for="userName">Name</label>
                     <select class="col-span-2" id="userName" name="name"> 
-                        <option value="rolly Castillo">Rolly Castillo</option>
+                        @foreach ($employees as $employee)
+                            <option value="{{ $employee->id }}">{{ ucwords($employee->firstname) . ' ' . ucfirst($employee->lastname) }}</option>
+                        @endforeach
                     </select>
 
                     <label class="font-semibold" for="username">Username</label>

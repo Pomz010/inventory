@@ -11,9 +11,10 @@ class DepartmentDropdown extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $departments;
+    public function __construct($departments)
     {
-        //
+        $this->departments = $departments;
     }
 
     /**
