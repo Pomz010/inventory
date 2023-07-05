@@ -40,7 +40,8 @@ Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.
 Route::get('/create-employee', [EmployeeController::class, 'create'])->name('create-employee');
 Route::post('/create-employee', [EmployeeController::class, 'store'])->name('create-employee.store');
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
-Route::get('/create-users', [UserController::class, 'create'])->name('create-user');
+Route::get('/create-users', [UserController::class, 'create'])->name('user.create');
+Route::post('/create-users', [UserController::class, 'store'])->name('user.store');
 
 Route::get('/vendors', [VendorController::class, 'index'])->name('vendors.index');
 Route::post('/create-vendor', [VendorController::class, 'store'])->name('vendors.store');

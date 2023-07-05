@@ -1,6 +1,6 @@
 <label class="font-semibold" for="section">Section</label>
 <div class="col-span-2">
-    <select class="w-full" id="section" name="sections_id">
+    <select class="w-full" id="section" name="section_id">
         @foreach ($sections as $section)
             <option value="{{ $section->id }}">{{ strtoupper($section->name) }}</option>
         @endforeach

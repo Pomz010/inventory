@@ -36,10 +36,10 @@ class EmployeeController extends Controller
     public function store(Request $request){
 
         $employee = $request->validate([
-            'employee_id' => ['required', 'string', 'max:255', Rule::unique('employees', 'id')],
-            'business_units_id' => ['required', 'string', 'max:255'],
-            'departments_id' => ['required', 'max:255'],
-            'sections_id' => ['required', 'max:255'],
+            'employee_number' => ['required', 'string', 'max:255', Rule::unique('employees', 'employee_number')],
+            'business_unit_id' => ['required', 'string', 'max:255'],
+            'department_id' => ['required', 'max:255'],
+            'section_id' => ['required', 'max:255'],
             'firstname' => ['required', 'string'],
             'lastname' => ['required', 'string'],
             'middle_name' => ['required', 'string'],

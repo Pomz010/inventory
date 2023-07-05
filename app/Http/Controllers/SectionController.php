@@ -24,8 +24,8 @@ class SectionController extends Controller
     public function store(Request $request){
         if(auth()->check()){
             $newSection = $request->validate([
-                'code' => ['required', 'string', 'max:255', Rule::unique('departments', 'code')],
-                'name' => ['required', 'string', 'max:255', Rule::unique('departments', 'name')],
+                'code' => ['required', 'string', 'max:255', Rule::unique('sections', 'code')],
+                'name' => ['required', 'string', 'max:255', Rule::unique('sections', 'name')],
                 'description' => ['nullable', 'string', 'max:255']
             ]);
 

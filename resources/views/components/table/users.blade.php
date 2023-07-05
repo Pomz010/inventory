@@ -28,7 +28,7 @@
         </div>
         
         {{-- Table --}}
-        <div id="categories" class="p-2 bg-white rounded-lg">
+        <div class="p-2 bg-white rounded-lg">
             <table id="departmentList" class="table-auto border border-collapse">
                 <thead>
                     <tr class="">
@@ -41,18 +41,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="border px-2 py-1">1</td>
-                        <td class="border px-2 py-1">admin</td>
-                        <td class="border px-2 py-1">admin</td>
-                        <td class="border px-2 py-1">admin</td>
-                        <td class="border px-2 py-1">admin.it.assets@agripacific-corp.com</td>
-                        <td class="border px-2 py-1 flex gap-4">
-                            <span class="btn">reset</span>
-                            <span class="btn">delete</span>
-                            <span class="btn">disable</span>
-                        </td>
-                    </tr>
+                    @php
+                     $counter = 1;   
+                    @endphp
+
+                    @foreach ($users as $user)
+                        <tr>
+                            <td class="border px-2 py-1">{{ $counter++ }}</td>
+                            <td class="border px-2 py-1">{{ $user->employee_id }}</td>
+                            <td class="border px-2 py-1">{{ $user->username }}</td>
+                            <td class="border px-2 py-1">{{ $user->role }}</td>
+                            <td class="border px-2 py-1">{{ $user->email }}</td>
+                            <td class="border px-2 py-1 flex gap-4">
+                                <span class="btn">reset</span>
+                                <span class="btn">delete</span>
+                                <span class="btn">disable</span>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

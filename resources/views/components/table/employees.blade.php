@@ -30,7 +30,7 @@
                 <thead>
                 <tr class="">
                     <th class="border px-2 py-1">#</th>
-                    <th class="border px-2 py-1">Emp. ID</th>
+                    <th class="border px-2 py-1">Employee #</th>
                     <th class="border px-2 py-1">BU</th>
                     <th class="border px-2 py-1">Dept.</th>
                     <th class="border px-2 py-1">Section</th>
@@ -51,10 +51,10 @@
                     @foreach ($employees as $employee)
                         <tr>
                             <td class="border px-2 py-1">{{ $counter++ }}</td>
-                            <td class="border px-2 py-1">{{ strtoupper($employee->employee_id) }}</td>
-                            <td class="border px-2 py-1">{{ $employee->business_units_id }}</td>
-                            <td class="border px-2 py-1">{{ $employee->departments_id }}</td>
-                            <td class="border px-2 py-1">{{ $employee->sections_id }}</td>
+                            <td class="border px-2 py-1">{{ strtoupper($employee->employee_number) }}</td>
+                            <td class="border px-2 py-1">{{ $employee->business_unit_id }}</td>
+                            <td class="border px-2 py-1">{{ $employee->department_id }}</td>
+                            <td class="border px-2 py-1">{{ $employee->section_id }}</td>
                             <td class="border px-2 py-1">{{ ucwords($employee->firstname) }}</td>
                             <td class="border px-2 py-1">{{ ucfirst($employee->lastname) }}</td>
                             <td class="border px-2 py-1">{{ ucfirst($employee->middle_name) }}</td>

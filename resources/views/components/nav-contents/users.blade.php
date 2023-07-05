@@ -1,3 +1,3 @@
 <x-main>
-    <x-table.users />
+    <x-table.users :users='$users'/>
 </x-main>

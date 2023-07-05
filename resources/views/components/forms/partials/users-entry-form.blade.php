@@ -1,3 +1,3 @@
 <li id='{{ $id }}' class="btnPadding btn static">
-    <a href="{{ route('create-user') }}">New Entry</a>
+    <a href="{{ route('user.create') }}">New Entry</a>
 </li>

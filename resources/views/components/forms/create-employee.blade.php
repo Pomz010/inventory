@@ -15,10 +15,10 @@
                 @csrf
 
                 <div class="formInputWrapper">                
-                    <label class="font-semibold" for="employeeID">Employee ID</label>
+                    <label class="font-semibold" for="employeeNumber">Employee ID</label>
                     <div class="col-span-2">
-                        <input class="w-full px-2" id="employeeID" name="employee_id" type="text" value="{{ $errors->has('employee_id') ? old('') : old('employee_id') }}">
-                        @error('employee_id')
+                        <input class="w-full px-2" id="employeeNumber" name="employee_number" type="text" value="{{ $errors->has('employee_number') ? old('') : old('employee_number') }}">
+                        @error('employee_number')
                             <p class="text-red-500"> {{ $message }}</p>
                         @enderror
                     </div>

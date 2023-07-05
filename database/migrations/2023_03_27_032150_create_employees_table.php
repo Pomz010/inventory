@@ -15,10 +15,10 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('employee_id')->unique();
-            $table->foreignId('business_units_id')->constrained();
-            $table->foreignId('departments_id')->constrained();
-            $table->foreignId('sections_id')->constrained();
+            $table->string('employee_number')->unique();
+            $table->foreignId('business_unit_id')->constrained();
+            $table->foreignId('department_id')->constrained();
+            $table->foreignId('section_id')->constrained();
             $table->string('firstname');
             $table->string('lastname');
             $table->string('middle_name');
