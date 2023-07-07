@@ -42,7 +42,7 @@
     {{-- Table --}}
     <div id="categories" class="p-2 bg-white rounded-lg">
       <x-table.all-assets />
-      <x-table.laptop-category />
+      <x-table.laptop-category :hardwareAssets='$hardwareAssets'/>
       <x-table.system-unit-category />
       <x-table.monitor-category />
       <x-table.printer-category />

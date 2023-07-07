@@ -5,39 +5,40 @@
     </div>
 
     <form action="#">
+        @csrf
         
         <div class="formInputWrapper">
-            <label class="font-semibold" for="brand">Brand</label>
-            <input class="col-span-2" id="laptopBrand" name="laptopBrand" type="text">
+            <label class="font-semibold" for="firewBrand">Brand</label>
+            <input class="col-span-2" id="firewallBrand" name="brand" type="text">
 
-            <label class="font-semibold" for="laptopModel">Model</label>
-            <input class="col-span-2" id="laptopModel" name="laptopModel" type="text">
+            <label class="font-semibold" for="firewallModel">Model</label>
+            <input class="col-span-2" id="firewallModel" name="model" type="text">
 
-            <label class="font-semibold" for="laptopSerial">Serial #</label>
-            <input class="col-span-2" id="laptopSerial" name="laptopSerial" type="text">
+            <label class="font-semibold" for="firewallSerial">Serial #</label>
+            <input class="col-span-2" id="firewallSerial" name="serial_#" type="text">
 
-            <label class="font-semibold" for="laptopSerial">MAC Address</label>
-            <input class="col-span-2" id="laptopSerial" name="laptopSerial" type="text">
+            <label class="font-semibold" for="firewallMacAddress">MAC Address</label>
+            <input class="col-span-2" id="firewallMacAddress" name="mac_address" type="text">
 
-            <label class="font-semibold" for="laptopSerial">IP Address</label>
-            <input class="col-span-2" id="laptopSerial" name="laptopSerial" type="text">
+            <label class="font-semibold" for="firewallIpAddress">IP Address</label>
+            <input class="col-span-2" id="firewallIpAddress" name="ip_address" type="text">
 
             <x-forms.partials.vendor-dropdown :vendors='$vendors' />
 
-            <label class="font-semibold" for="laptopPurchaseDate">Date Purchased</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="date">
+            <label class="font-semibold" for="firewallPurchaseDate">Date Purchased</label>
+            <input class="col-span-2" id="firewallPurchaseDate" name="purchase_date" type="date">
 
-            <label class="font-semibold" for="laptopCondition">Warranty Expiration</label>
-            <input class="col-span-2" id="laptopCondition" name="laptopCondition" type="date">
+            <label class="font-semibold" for="firewallWarrantyExpiration">Warranty Expiration</label>
+            <input class="col-span-2" id="firewallWarrantyExpiration" name="warranty" type="date">
             
-            <label class="font-semibold" for="laptopPurchaseDate">DR #</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+            <label class="font-semibold" for="firewallDR">DR #</label>
+            <input class="col-span-2" id="firewallDR" name="dr_#" type="text">
 
-            <label class="font-semibold" for="laptopPurchaseDate">PO #</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+            <label class="font-semibold" for="firewallPO">PO #</label>
+            <input class="col-span-2" id="firewallPO" name="po_#" type="text">
 
-            <label class="font-semibold" for="laptopPurchaseDate">Price</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+            <label class="font-semibold" for="firewallPrice">Price</label>
+            <input class="col-span-2" id="firewallPrice" name="price" type="text">
         </div>
         
         <x-forms.partials.button-set />

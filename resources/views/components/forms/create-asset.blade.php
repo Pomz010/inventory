@@ -1,5 +1,5 @@
 <x-main>
-    <div class="w-4/12 mx-auto">
+    <div class="formWidth">
         @switch($asset)
             @case('laptop')
                 <x-forms.new-laptop :vendors='$vendors' />

@@ -7,7 +7,7 @@
         </div>
     @endif
 
-    <div class="grid items-center w-3/12 mx-auto">
+    <div class="formWidth">
         <div class="formWrapper">
             <div class="formHeader">
                 <h2 class="font-bold">New Vendor</h2>

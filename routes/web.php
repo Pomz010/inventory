@@ -33,6 +33,8 @@ Route::get('/signout', [LoginController::class, 'signout']);
 
 Route::get('/assets', [AssetController::class, 'index'])->name('assets.index');
 Route::get('/create-asset/{asset}', [AssetController::class, 'create'])->name('create-asset');
+Route::post('/create-asset/laptop', [AssetController::class, 'store'])->name('create-asset.store');
+
 Route::get('/create-hardware', [HardwareController::class, 'create'])->name('hardware');
 Route::get('/department', [DepartmentController::class, 'index'])->name('department.index');
 

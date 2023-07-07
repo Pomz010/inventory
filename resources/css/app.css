@@ -31,9 +31,13 @@
 }
 
 .formInputWrapper {
-    @apply grid grid-cols-3 py-4 gap-4;
+    @apply grid grid-cols-3 py-4 gap-x-8 gap-y-4;
 }
 
 .newEntryCategory {
     @apply hover:bg-slate-600 w-full block px-2 py-1;
+}
+
+.formWidth {
+    @apply w-6/12 mx-auto min-w-max grid items-center;
 }

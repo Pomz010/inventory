@@ -1,5 +1,5 @@
 <x-main>
-    <div class="grid items-center w-3/12 mx-auto">
+    <div class="formWidth">
         <div class="formWrapper">
             <div class="formHeader">
                 <h2 class="font-bold">New User</h2>
@@ -45,7 +45,7 @@
 
                     <label class="font-semibold" for="userEmail">Email</label>
                     <div class="col-span-2">
-                        <input class="w-full" id="userEmail" name="email" type="Email" value="{{ $errors->has('email') ? old('') : old('email') }}">
+                        <input class="w-full" id="userEmail" name="email" type="Email" value="{{ $employee->email }}" disabled>
                         @error('email')
                             <p class="text-red-500"> {{ $message }}</p>
                         @enderror

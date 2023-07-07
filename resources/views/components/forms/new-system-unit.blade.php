@@ -7,49 +7,52 @@
     <form action="#">
 
         <div class="formInputWrapper">
+
+            <input class="col-span-2" id="systemUnitAssetTag" name="item"  value="system unit" type="text" hidden>
+
             <label class="font-semibold" for="systemUnitAssetTag">Asset Tag</label>
-            <input class="col-span-2" id="systemUnitAssetTag" name="systemUnitAssetTag" type="text">
+            <input class="col-span-2" id="systemUnitAssetTag" name="asset_tag" type="text">
             
             <label class="font-semibold" for="systemUnitBrand">Brand</label>
-            <input class="col-span-2" id="systemUnitBrand" name="systemUnitBrand" type="text">
+            <input class="col-span-2" id="systemUnitBrand" name="brand" type="text">
 
             <label class="font-semibold" for="systemUnitModel">Model</label>
-            <input class="col-span-2" id="systemUnitModel" name="systemUnitModel" type="text">
+            <input class="col-span-2" id="systemUnitModel" name="model" type="text">
 
             <label class="font-semibold" for="systemUnitBoard">Motherboard</label>
-            <input class="col-span-2" id="systemUnitBoard" name="systemUnitBoard" type="text">
+            <input class="col-span-2" id="systemUnitBoard" name="motherboard" type="text">
 
             <label class="font-semibold" for="systemUnitSN">Motherboard S/N</label>
-            <input class="col-span-2" id="systemUnitSN" name="systemUnitSN" type="text">
+            <input class="col-span-2" id="systemUnitSN" name="serial_#" type="text">
 
             <label class="font-semibold" for="systemUnitProcessor">Processor</label>
-            <input class="col-span-2" id="systemUnitProcessor" name="systemUnitProcessor" type="text">
+            <input class="col-span-2" id="systemUnitProcessor" name="processor" type="text">
 
             <label class="font-semibold" for="systemUnitRAM">Memory</label>
-            <input class="col-span-2" id="systemUnitRAM" name="systemUnitRAM" type="text">
+            <input class="col-span-2" id="systemUnitRAM" name="memory" type="text">
 
             <label class="font-semibold" for="systemUnitStorage">Storage</label>
-            <input class="col-span-2" id="systemUnitStorage" name="systemUnitStorage" type="text">
+            <input class="col-span-2" id="systemUnitStorage" name="storage" type="text">
 
             <label class="font-semibold" for="systemUnitGPU">Graphics Card</label>
-            <input class="col-span-2" id="systemUnitGPU" name="systemUnitGPU" type="text">
+            <input class="col-span-2" id="systemUnitGPU" name="gpu" type="text">
 
             <x-forms.partials.vendor-dropdown :vendors='$vendors' />
 
             <label class="font-semibold" for="systemUnitPurchaseDate">Date Purchased</label>
-            <input class="col-span-2" id="systemUnitPurchaseDate" name="systemUnitPurchaseDate" type="date">
+            <input class="col-span-2" id="systemUnitPurchaseDate" name="purchase_date" type="date">
 
             <label class="font-semibold" for="systemUnitWarrantyExpiration">Warranty Expiration</label>
-            <input class="col-span-2" id="systemUnitWarrantyExpiration" name="systemUnitWarrantyExpiration" type="date">
+            <input class="col-span-2" id="systemUnitWarrantyExpiration" name="warranty" type="date">
 
             <label class="font-semibold" for="systemUnitDR">DR #</label>
-            <input class="col-span-2" id="systemUnitDR" name="systemUnitDR" type="text">
+            <input class="col-span-2" id="systemUnitDR" name="dr_#" type="text">
 
             <label class="font-semibold" for="systemUnitPO">PO #</label>
-            <input class="col-span-2" id="systemUnitPO" name="systemUnitPO" type="text">
+            <input class="col-span-2" id="systemUnitPO" name="po_#" type="text">
 
             <label class="font-semibold" for="systemUnitPrice">Price</label>
-            <input class="col-span-2" id="systemUnitPrice" name="systemUnitPrice" type="number">
+            <input class="col-span-2" id="systemUnitPrice" name="price" type="number">
         </div>
 
         <x-forms.partials.button-set />

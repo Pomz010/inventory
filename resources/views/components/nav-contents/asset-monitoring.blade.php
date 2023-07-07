@@ -23,7 +23,7 @@
         {{-- <span class="btn bg-slate-500"><a href="{{ route('dashboard') }}">Back</a></span> --}}
     </div>
     <div id="tableContainer" class="flex flex-col justify-center items-center">
-        <x-table.hardware />
+        <x-table.hardware :hardwareAssets='$hardwareAssets'/>
         <x-table.software />
         <x-table.toner-balance />
         <x-table.toner-transactions />

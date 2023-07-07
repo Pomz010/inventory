@@ -22,9 +22,13 @@
           </tr>
         </thead>
         <tbody>
+          @php
+              $counter = 1;
+          @endphp
+          @foreach ($hardwareAssets as $hardwareAsset)
           <tr>
-            <td class="border px-2 py-1">1</td>
-            <td class="border px-2 py-1">Laptop</td>
+            <td class="border px-2 py-1">{{ $counter++ }}</td>
+            <td class="border px-2 py-1">{{ $hardwareAsset->asset_tag }}</td>
             <td class="border px-2 py-1">Lenovo</td>
             <td class="border px-2 py-1">ThinkPad L14</td>
             <td class="border px-2 py-1">APC-00603</td>
@@ -41,5 +45,6 @@
             <td class="border px-2 py-1">In-use</td>
             <td class="border px-2 py-1">Good</td>
           </tr>
+          @endforeach
         </tbody>
     </table>

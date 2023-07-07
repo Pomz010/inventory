@@ -1,7 +1,7 @@
 <div class="flex flex-col justify-center items-center">
     <div id="departmentsTable" class="flex flex-col gap-1">
         {{-- Table Filter --}}
-        <div class="flex justify-between bg-white p-2 rounded-md items-center">
+        <div class="flex justify-between bg-white p-2 rounded-md items-center gap-x-6">
     
             <form class="flex gap-x-8">
               <div class="border-r-2 border-slate-950 pr-8">
@@ -40,6 +40,7 @@
                     <th class="border px-2 py-1">Mobile #</th>
                     <th class="border px-2 py-1">Telephone</th>
                     <th class="border px-2 py-1">Email</th>
+                    <th class="border px-2 py-1">Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -54,6 +55,10 @@
                             <td class="border px-2 py-1">{{ $vendor->phone }}</td>
                             <td class="border px-2 py-1">{{ $vendor->telephone }}</td>
                             <td class="border px-2 py-1">{{ $vendor->email }}</td>
+                            <td class="border px-2 py-1 px-4">
+                                <a class="btn" href="#">Edit</a>
+                                <a class="btn" href="#">Delete</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

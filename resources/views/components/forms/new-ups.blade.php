@@ -5,36 +5,39 @@
     </div>
     
     <form action="#">
+        @csrf
         
         <div class="formInputWrapper">
-            <label class="font-semibold" for="laptopAssetTag">Asset Tag</label>
-            <input class="col-span-2" id="laptopAssetTag" name="laptopAssetTag" type="text">
+            <input class="col-span-2" id="upsItem" name="item" value="ups" type="text" hidden>
+
+            <label class="font-semibold" for="upsAssetTag">Asset Tag</label>
+            <input class="col-span-2" id="upsAssetTag" name="asset_tag" type="text">
             
-            <label class="font-semibold" for="brand">Brand</label>
-            <input class="col-span-2" id="laptopBrand" name="laptopBrand" type="text">
+            <label class="font-semibold" for="upsBrand">Brand</label>
+            <input class="col-span-2" id="upsBrand" name="brand" type="text">
 
-            <label class="font-semibold" for="laptopModel">Model</label>
-            <input class="col-span-2" id="laptopModel" name="laptopModel" type="text">
+            <label class="font-semibold" for="upsModel">Model</label>
+            <input class="col-span-2" id="upsModel" name="model" type="text">
 
-            <label class="font-semibold" for="laptopModel">Serial #</label>
-            <input class="col-span-2" id="laptopModel" name="laptopModel" type="text">
+            <label class="font-semibold" for="upsSerial">Serial #</label>
+            <input class="col-span-2" id="upsSerial" name="serial_#" type="text">
 
             <x-forms.partials.vendor-dropdown :vendors='$vendors' />
 
-            <label class="font-semibold" for="laptopPurchaseDate">Date Purchased</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="date">
+            <label class="font-semibold" for="upsPurchaseDate">Date Purchased</label>
+            <input class="col-span-2" id="upsPurchaseDate" name="purchase_date" type="date">
 
-            <label class="font-semibold" for="laptopUser">Warranty Expiration</label>
-            <input class="col-span-2" id="laptopUser" name="laptopUser" type="date">
+            <label class="font-semibold" for="upsWarrantyExpiration">Warranty Expiration</label>
+            <input class="col-span-2" id="upsWarrantyExpiration" name="warranty" type="date">
 
-            <label class="font-semibold" for="laptopPurchaseDate">DR #</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+            <label class="font-semibold" for="upsDR">DR #</label>
+            <input class="col-span-2" id="upsDR" name="dr_#" type="text">
 
-            <label class="font-semibold" for="laptopPurchaseDate">PO #</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+            <label class="font-semibold" for="upsPO">PO #</label>
+            <input class="col-span-2" id="upsPO" name="po_#" type="text">
 
-            <label class="font-semibold" for="laptopPurchaseDate">Price</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+            <label class="font-semibold" for="upsPrice">Price</label>
+            <input class="col-span-2" id="upsPrice" name="price" type="text">
         </div>
 
         <x-forms.partials.button-set />

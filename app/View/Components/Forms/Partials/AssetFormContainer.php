@@ -1,21 +1,19 @@
 <?php
 
-namespace App\View\Components\Table;
+namespace App\View\Components\Forms\Partials;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Hardware extends Component
+class AssetFormContainer extends Component
 {
     /**
      * Create a new component instance.
      */
-    public $hardwareAssets;
-    public function __construct($hardwareAssets)
+    public function __construct()
     {
-        // dd($hardwareAssets);
-        $this->hardwareAssets = $hardwareAssets;
+        //
     }
 
     /**
@@ -23,6 +21,6 @@ class Hardware extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.table.hardware');
+        return view('components.forms.partials.asset-form-container');
     }
 }

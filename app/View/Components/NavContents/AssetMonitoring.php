@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\Table;
+namespace App\View\Components\NavContents;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Hardware extends Component
+class AssetMonitoring extends Component
 {
     /**
      * Create a new component instance.
@@ -14,7 +14,7 @@ class Hardware extends Component
     public $hardwareAssets;
     public function __construct($hardwareAssets)
     {
-        // dd($hardwareAssets);
+        // dd($this->hardwareAssets);
         $this->hardwareAssets = $hardwareAssets;
     }
 
@@ -23,6 +23,6 @@ class Hardware extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.table.hardware');
+        return view('components.nav-contents.asset-monitoring');
     }
 }
