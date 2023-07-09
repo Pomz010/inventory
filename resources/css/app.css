@@ -39,5 +39,5 @@
 }
 
 .formWidth {
-    @apply w-6/12 mx-auto min-w-max grid items-center;
+    @apply w-6/12 mx-auto min-w-max max-w-xl grid items-center;
 }

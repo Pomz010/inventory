@@ -19,21 +19,27 @@
       </tr>
     </thead>
     <tbody>
+      @php
+       $counter = 1;   
+      @endphp
+
+      @foreach ($hardwareAssets as $asset)
       <tr>
-        <td class="border px-2 py-1">1</td>
-        <td class="border px-2 py-1">APC-00603</td>
-        <td class="border px-2 py-1">Laptop</td>
-        <td class="border px-2 py-1">Rolly Castillo</td>
-        <td class="border px-2 py-1">ISS</td>
-        <td class="border px-2 py-1">APC-Tarlac</td>
-        <td class="border px-2 py-1">Feedmill Admin Bldg.</td>
-        <td class="border px-2 py-1">Oct. 9, 2021</td>
-        <td class="border px-2 py-1">Oct. 9, 2024</td>
+        <td class="border px-2 py-1">{{ $counter++ }}</td>
+        <td class="border px-2 py-1">{{ $asset->asset_tag }}</td>
+        <td class="border px-2 py-1">{{ $asset->item }}</td>
+        <td class="border px-2 py-1">{{ $asset->user }}</td>
         <td class="border px-2 py-1"></td>
         <td class="border px-2 py-1"></td>
         <td class="border px-2 py-1"></td>
-        <td class="border px-2 py-1">Good</td>
-        <td class="border px-2 py-1">In-use</td>
+        <td class="border px-2 py-1">{{ $asset->purchase_date }}</td>
+        <td class="border px-2 py-1">{{ $asset->warranty }}</td>
+        <td class="border px-2 py-1">{{ $asset->dr_number }}</td>
+        <td class="border px-2 py-1">{{ $asset->po_number }}</td>
+        <td class="border px-2 py-1">{{ $asset->price }}</td>
+        <td class="border px-2 py-1"></td>
+        <td class="border px-2 py-1"></td>
+      @endforeach
       </tr>
     </tbody>
 </table>

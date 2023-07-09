@@ -11,9 +11,10 @@ class AllAssets extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $hardwareAssets;
+    public function __construct($hardwareAssets)
     {
-        //
+        $this->hardwareAssets = $hardwareAssets;
     }
 
     /**

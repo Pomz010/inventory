@@ -3,7 +3,7 @@
     <thead>
       <tr class="">
         <th class="border px-2 py-1">#</th>
-        <th class="border px-2 py-1">Asset Type</th>
+        <th class="border px-2 py-1">Asset Tag</th>
         <th class="border px-2 py-1">Brand</th>
         <th class="border px-2 py-1">Board Model</th>
         <th class="border px-2 py-1">Asset Tag</th>
@@ -21,23 +21,29 @@
       </tr>
     </thead>
     <tbody>
+      @php
+          $counter = 1;
+      @endphp
+
+      @foreach ($systemUnits as $systemUnit)
       <tr>
-        <td class="border px-2 py-1">1</td>
-        <td class="border px-2 py-1">System Unit</td>
-        <td class="border px-2 py-1">Clone</td>
-        <td class="border px-2 py-1">Clone</td>
-        <td class="border px-2 py-1">APC-00603</td>
-        <td class="border px-2 py-1">Intel Core i5-1135G7</td>
-        <td class="border px-2 py-1">8Gb</td>
-        <td class="border px-2 py-1">500Gb SSD</td>
-        <td class="border px-2 py-1">Integrated</td>
-        <td class="border px-2 py-1">Oct. 9, 2021</td>
-        <td class="border px-2 py-1">Rolly A. Castillo</td>
-        <th class="border px-2 py-1"></th>
-        <th class="border px-2 py-1"></th>
-        <th class="border px-2 py-1"></th>
-        <td class="border px-2 py-1">In-use</td>
-        <td class="border px-2 py-1">Good</td>
+        <td class="border px-2 py-1">{{ $counter++ }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->item }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->brand }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->motherboard }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->asset_tag }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->processor }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->memory }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->storage }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->gpu }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->purchase_date }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->user }}</td>
+        <th class="border px-2 py-1">{{ $systemUnit->dr_number }}</th>
+        <th class="border px-2 py-1">{{ $systemUnit->po_number }}</th>
+        <th class="border px-2 py-1">{{ $systemUnit->price }}</th>
+        <td class="border px-2 py-1">{{ $systemUnit->condition }}</td>
+        <td class="border px-2 py-1">{{ $systemUnit->status }}</td>
       </tr>
+      @endforeach
     </tbody>
 </table>

@@ -11,11 +11,10 @@ class LaptopCategory extends Component
     /**
      * Create a new component instance.
      */
-    public $hardwareAssets;
-    public function __construct($hardwareAssets)
+    public $laptops;
+    public function __construct($laptops)
     {
-        // dd($hardwareAssets);
-        $this->hardwareAssets = $hardwareAssets;
+        $this->laptops = $laptops;
     }
 
     /**

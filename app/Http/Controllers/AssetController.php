@@ -14,8 +14,9 @@ class AssetController extends Controller
         if(auth()->check()){
             Session::put('previousPage', request()->fullUrl());
             $hardwareAssets = HardwareAsset::all();
-            // dd($hardwareAssets);
-            return view('components.nav-contents.asset-monitoring', compact('hardwareAssets'));
+            $laptops = HardwareAsset::where('item', '=', 'laptop')->take(10)->get();
+            $systemUnits = HardwareAsset::where('item', '=', 'system unit')->take(10)->get();
+            return view('components.nav-contents.asset-monitoring', compact('hardwareAssets', 'laptops', 'systemUnits'));
         } else {
             return redirect('/');
         }
@@ -44,16 +45,16 @@ class AssetController extends Controller
                 'storage' => ['nullable', 'string', 'max:255'],
                 'gpu' => ['nullable', 'string', 'max:255'],
                 'motherboard' => ['nullable', 'string', 'max:255'],
-                'serial_#' => ['required', 'string', 'max:255'],
-                'os_name' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'serial_#')],
+                'serial_number' => ['required', 'string', 'max:255'],
+                'os_name' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'serial_number')],
                 'os_category' => ['nullable', 'string', 'max:255'],
                 'os_productKey' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'os_productKey')],
                 'hostname' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'hostname')],
                 'vendor' => ['required', 'string', 'max:255'],
                 'purchase_date' => ['required', 'date'],
                 'warranty' => ['required', 'date'],
-                'dr_#' => ['required', 'string', 'max:255'],
-                'po_#' => ['required', 'string', 'max:255'],
+                'dr_number' => ['required', 'string', 'max:255'],
+                'po_number' => ['required', 'string', 'max:255'],
                 'price' => ['required', 'string', 'max:255'],
                 'printer_type' => ['nullable', 'string', 'max:255'],
                 'mac_address' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'mac_address')],

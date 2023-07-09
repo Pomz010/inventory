@@ -11,9 +11,13 @@ class SystemUnitCategory extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    // public $hardwareAssets;
+    public $systemUnits;
+    public function __construct($systemUnits)
     {
-        //
+        // $this->hardwareAssets = $hardwareAssets;
+        $this->systemUnits = $systemUnits;
+        // dd($systemUnits);
     }
 
     /**

@@ -63,8 +63,8 @@
     
             <label class="font-semibold" for="laptopSN">Serial #</label>
             <div class="col-span-2">
-                <input class="w-full" id="laptopSN" name="serial_#" type="text" value="{{ $errors->has('serial_#') ? old('') : old('serial_#'); }}">
-                @error('serial_#')
+                <input class="w-full" id="laptopSN" name="serial_number" type="text" value="{{ $errors->has('serial_number') ? old('') : old('serial_number'); }}">
+                @error('serial_number')
                 <p class="text-red-500"> {{ $message }}</p>
                 @enderror
             </div>
@@ -109,22 +109,22 @@
             <div class="col-span-2">
                 <input class="w-full" id="laptopWarrantyExpiration" name="warranty" type="date" value="{{ $errors->has('warranty') ? old('') : old('warranty'); }}">
                 @error('warranty')
-                <p class="text-red-500"> {{ $message }}</p>
+                    <p class="text-red-500"> {{ $message }}</p>
                 @enderror
             </div>
     
             <label class="font-semibold" for="laptopDR">DR #</label>
             <div class="col-span-2">
-                <input class="w-full" id="laptopDR" name="dr_#" type="text" value="{{ $errors->has('dr_#') ? old('') : old('dr_#'); }}">
-                @error('dr_#')
-                <p class="text-red-500"> {{ $message }}</p>
+                <input class="w-full" id="laptopDR" name="dr_number" type="text" value="{{ $errors->has('dr_number') ? old('') : old('dr_number'); }}">
+                @error('dr_number')
+                    <p class="text-red-500"> {{ $message }}</p>
                 @enderror
             </div>
     
             <label class="font-semibold" for="laptopPO">PO #</label>
             <div class="col-span-2">
-                <input class="w-full" id="laptopPO" name="po_#" type="text" value="{{ $errors->has('po_#') ? old('') : old('po_#'); }}">
-                @error('po_#')
+                <input class="w-full" id="laptopPO" name="po_number" type="text" value="{{ $errors->has('po_number') ? old('') : old('po_number'); }}">
+                @error('po_number')
                 <p class="text-red-500"> {{ $message }}</p>
                 @enderror
             </div>
@@ -133,7 +133,7 @@
             <div class="col-span-2">
                 <input class="w-full" id="laptopPrice" name="price" type="number" value="{{ $errors->has('price') ? old('') : old('price'); }}">
                 @error('price')
-                <p class="text-red-500"> {{ $message }}</p>
+                    <p class="text-red-500"> {{ $message }}</p>
                 @enderror
             </div>
         </div>

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('storage')->nullable();
             $table->string('gpu')->nullable();
             $table->string('motherboard')->nullable();
-            $table->string('serial_#');
+            $table->string('serial_number');
             $table->string('os_name')->nullable();
             $table->string('os_category')->nullable();
             $table->string('os_productKey')->nullable();
@@ -30,8 +30,8 @@ return new class extends Migration
             $table->string('vendor');
             $table->date('purchase_date');
             $table->date('warranty');
-            $table->string('dr_#');
-            $table->string('po_#');
+            $table->string('dr_number');
+            $table->string('po_number');
             $table->string('price');
             $table->string('printer_type')->nullable();
             $table->string('mac_address')->nullable();
@@ -45,6 +45,9 @@ return new class extends Migration
             $table->string('account_#')->nullable();
             $table->string('data_plan')->nullable();
             $table->string('description')->nullable();
+            $table->string('user')->nullable();
+            $table->string('condition')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
@@ -54,6 +57,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('assets');
+        Schema::dropIfExists('hardware_assets');
     }
 };

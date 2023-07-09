@@ -41,9 +41,9 @@
     
     {{-- Table --}}
     <div id="categories" class="p-2 bg-white rounded-lg">
-      <x-table.all-assets />
-      <x-table.laptop-category :hardwareAssets='$hardwareAssets'/>
-      <x-table.system-unit-category />
+      <x-table.all-assets :hardwareAssets='$hardwareAssets' />
+      <x-table.laptop-category :laptops='$laptops' />
+      <x-table.system-unit-category :systemUnits='$systemUnits' />
       <x-table.monitor-category />
       <x-table.printer-category />
       <x-table.ups-category />
