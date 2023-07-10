@@ -1,19 +1,17 @@
 import UserMenu from "./modules/UserMenu.mjs"
-import Assets from "./modules/Assets.mjs";
 import MainNav from "./modules/MainNav.mjs";
-
-
-  const assets = new Assets();
-  const mainNav = new MainNav();
+import getIndex from "./modules/helper.mjs";
+import TabContents from "./modules/Assets.mjs";
 
 // Event listener for User Avatar Menu
 //Shows menu when user avatar is clicked
 document.addEventListener('DOMContentLoaded', e => {
   try {
     const avatarIcon = document.querySelector('#userAvatar');
-    const userMenu = new UserMenu();
+    const avatarMenu = avatarIcon.nextElementSibling;
+    const userMenu = new UserMenu(avatarIcon, avatarMenu);
 
-      userMenu.show(avatarIcon);    
+      userMenu.show;    
   } catch (error) {
   }
 })
@@ -24,51 +22,61 @@ document.addEventListener('DOMContentLoaded', e => {
   if(window.location.pathname === '/'){
     document.addEventListener('DOMContentLoaded', () => { 
       try {
-
-        //Store index number to local storage and use it to identify active nav state in main nav
-        localStorage.setItem('navIndex', 1);
+        const indexNumber = getIndex('dashboard');
+        const dashboardTab = new MainNav(indexNumber);
 
         //retrieved stored index number and pass it as an argument to activeNav to show currently selected nav in main nav
-        mainNav.activeNav(localStorage.getItem('navIndex'));
+        dashboardTab.setActiveTab();
       } catch (error) {
       }
     })
   }
   
 
-// Event will only execute under /assets/* route
+// Event will only execute under /assets or /create-asset route
   if(window.location.pathname === '/assets' || window.location.pathname.includes('/create-asset')){
     document.addEventListener('DOMContentLoaded', () => { 
 
-      localStorage.setItem('navIndex', 2);
-      mainNav.activeNav(localStorage.getItem('navIndex'));
+      const indexNumber = getIndex('asset monitoring');
+      const assetMonitoringTab = new MainNav(indexNumber);
+      assetMonitoringTab.setActiveTab();
 
       try {
-        const assetMenu = document.querySelector('#assetMenu');
+        
+        const assetMonitoringTabs = document.querySelector('#assetMenu');
         const newAssetEntryTable = document.querySelector('#newEntryTable');
         const tonerTab = document.querySelector('#tonerTab');
         const hardwareCategory = document.querySelector('#hardwareCategory');
-        assets.show(assetMenu); // Shows submenu from Asset Monitoring main nav 
-        assets.dropdown(newAssetEntryTable); // Select asset category and route to asset entry form
-        assets.dropdown(tonerTab); // Select from Toner Balance or Toner Transactions
-        assets.selectCategory(hardwareCategory); // Select asset category & display asset table
+        const hardwareTab = new TabContents(assetMonitoringTabs, hardwareCategory);
+        
+        hardwareTab.showActiveTab(); // Shows submenu from Asset Monitoring main nav 
+        hardwareTab.dropdown(newAssetEntryTable); // Select asset category and route to asset entry form
+        hardwareTab.dropdown(tonerTab); // Select from Toner Balance or Toner Transactions
+        hardwareTab.selectCategory(hardwareCategory); // Select asset category & display asset table
       } catch (error) {
+        console.log(error);
+      } finally{
+        const formEntry = new TabContents();
+        const entryBtnForm = document.querySelector('#newEntry');
+        formEntry.dropdown(entryBtnForm);
       }
     })
   }
 
-  // Event will only execute under /department route
+  // Event will only execute under /department or /create-department route
   if(window.location.pathname === '/department' || window.location.pathname.includes('/create-department')){
     document.addEventListener('DOMContentLoaded', () => { 
 
-      localStorage.setItem('navIndex', 3);
-      mainNav.activeNav(localStorage.getItem('navIndex'));
+      const indexNumber = getIndex('department');
+      const departmentTab = new MainNav(indexNumber);
+      departmentTab.setActiveTab();
 
       try {
         const departmentTabs = document.querySelector('#departmentTabs');
         const newDepartmentBtn = document.querySelector('#newDepartment');
-        assets.dropdown(newDepartmentBtn);
-        assets.show(departmentTabs);
+        const departments = new TabContents(departmentTabs);
+        departments.dropdown(newDepartmentBtn);
+        departments.showActiveTab();
       } catch (error) {
         console.log(error);
       }
@@ -76,48 +84,32 @@ document.addEventListener('DOMContentLoaded', e => {
   }
 
 
-  // Event will only execute under /department route
+  // Event will only execute under /employees or /create-employee route
   if(window.location.pathname === '/employees' || window.location.pathname.includes('/create-employee')){
     document.addEventListener('DOMContentLoaded', () => { 
 
-      localStorage.setItem('navIndex', 4);
-      mainNav.activeNav(localStorage.getItem('navIndex'));
+      const indexNumber = getIndex('employee list');
+      const employeeListTab = new MainNav(indexNumber);
+      employeeListTab.setActiveTab();
 
-      try {
-        const departmentTabs = document.querySelector('#newEmployeeBtn');
-      } catch (error) {
-        console.log(error);
-      }
     })
   }
 
-  
-  if(window.location.pathname.includes('/create-asset')){
+  // Event will only execute under /users or /create-user route
+  if(window.location.pathname === '/users' || window.location.pathname === '/create-user'){
     document.addEventListener('DOMContentLoaded', () => { 
-      const entryBtn = document.querySelector('#newEntry');
-  
-      mainNav.activeNav(localStorage.getItem('navIndex'));
-      assets.dropdown(entryBtn);
+      const indexNumber = getIndex('users');
+      const usersTab = new MainNav(indexNumber);
+      usersTab.setActiveTab();
     })
   }
 
-  if(window.location.pathname === '/users'){
-    document.addEventListener('DOMContentLoaded', () => { 
-      localStorage.setItem('navIndex', 5);
-      mainNav.activeNav(localStorage.getItem('navIndex'));
-    })
-  }
-
-  if(window.location.pathname.includes('/create-user')){
-    document.addEventListener('DOMContentLoaded', () => { 
-      mainNav.activeNav(localStorage.getItem('navIndex'));
-    })
-  }
-
+  // Event will only execute under /vendors or /create-vendor route
   if(window.location.pathname === '/vendors' || window.location.pathname === '/create-vendor'){
     document.addEventListener('DOMContentLoaded', () => { 
-      localStorage.setItem('navIndex', 6);
-      mainNav.activeNav(localStorage.getItem('navIndex'));
+      const indexNumber = getIndex('vendor');
+      const vendorsTab = new MainNav(indexNumber);
+      vendorsTab.setActiveTab();
     })
   }
 

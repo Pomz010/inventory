@@ -1,10 +1,14 @@
 export default class UserMenu{
-    show(icon){
+    constructor(avatarIcon, avatarMenu){
+        this.avatarIcon = avatarIcon;
+        this.avatarMenu = avatarMenu;
+    }
+
+    get show(){
         // Shows & hide menu when user's avatar is clicked
-        icon.addEventListener('click', () => {
-            const avatarMenu = icon.nextElementSibling;
-            avatarMenu.classList.toggle('hidden');
-            this.hide(icon, avatarMenu);
+        this.avatarIcon.addEventListener('click', () => {
+            this.avatarMenu.classList.toggle('hidden');
+            this.hide(avatarIcon, avatarMenu);
             // console.log(icon);
         })
     }

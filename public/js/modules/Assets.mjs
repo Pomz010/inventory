@@ -1,4 +1,9 @@
-export default class Assets{
+export default class TabContents{
+
+    constructor(assetTabs, hardwareCategory){
+        this.assetTabs = assetTabs;
+        this.hardwareCategory = hardwareCategory;
+    }
 
     selectCategory(category){
         category.addEventListener('change', e => {
@@ -8,9 +13,9 @@ export default class Assets{
     }
 
     // Displays submenu from main nav
-    show(assetMenu){
+    showActiveTab(){
 
-        const tabs = Array.from(assetMenu.children); //Sub menu items
+        const tabs = Array.from(this.assetTabs.children); //Sub menu items
 
         tabs.forEach(tab => {
             let tableName; 
@@ -43,7 +48,7 @@ export default class Assets{
                 if(tab.classList.contains('activeTab')){ // Displays default table based on default selected tab from submenu
                     this.showTable(tab.innerText);
                     this.hide(tabs, tab);
-                    console.log(tab.innerText);
+                    // console.log(tab.innerText);
                 }
             }
 
@@ -60,25 +65,25 @@ export default class Assets{
     }
 
     showTable(tab){ // Displays table based on the selected menu tab
-        console.log(tab)   
+        console.log(tab.toLowerCase())   
         const tonerTab = document.querySelector('#tonerTab');
         const categories = Array.from(document.querySelector('#categories').children);
         let visibleTable;
 
-        switch (tab) {
-            case 'Hardware':
+        switch (tab.toLowerCase()) {
+            case 'hardware':
                 visibleTable = document.querySelector('#hardwareTable');
                 visibleTable.classList.remove('hidden');
                 this.hideTable(visibleTable);
                 break;
 
-            case 'Software':
+            case 'software':
                 visibleTable = document.querySelector('#softwareTable');
                 visibleTable.classList.remove('hidden');
                 this.hideTable(visibleTable);
                 break;
 
-            case 'Balance':
+            case 'balance':
                 visibleTable = document.querySelector('#tonerBalanceTable');
                 visibleTable.classList.remove('hidden');
                 this.hideTable(visibleTable);
@@ -86,26 +91,26 @@ export default class Assets{
                 // console.log(table);
                 break;
 
-            case 'Transactions':
+            case 'transactions':
                 visibleTable = document.querySelector('#tonerTransactionsTable');
                 visibleTable.classList.remove('hidden');
                 this.hideTable(visibleTable);
                 tonerTab.setAttribute('class', 'activeTab')
                 break;
 
-            case 'Business Unit':
+            case 'business unit':
                 visibleTable = document.querySelector('#businessUnit');
                 visibleTable.classList.remove('hidden');
                 this.hideTable(visibleTable);
                 break;
 
-            case 'Departments':
+            case 'departments':
                 visibleTable = document.querySelector('#departmentsTable');
                 visibleTable.classList.remove('hidden');
                 this.hideTable(visibleTable);
                 break;
 
-            case 'Section':
+            case 'section':
                 visibleTable = document.querySelector('#sectionsTable');
                 visibleTable.classList.remove('hidden');
                 this.hideTable(visibleTable);
@@ -257,7 +262,6 @@ export default class Assets{
             dropdownItems.forEach(item => {
                 item.addEventListener('click', e => {
                     dropdownContainer.classList.add('hidden');
-                    this.show(item);
                 })
             })
 
