@@ -1,4 +1,5 @@
 export default class MainNav{
+
     constructor(tabIndex){
         this.tabIndex = tabIndex;
     }
@@ -9,7 +10,7 @@ export default class MainNav{
     }
 
     _showActiveTab(tabIndex){
-        // localStorage.getItem('tabIndex');
         document.querySelector(`#mainNav li:nth-child( ${ tabIndex } )`).classList.add('activeNav');
     }
+
 }
