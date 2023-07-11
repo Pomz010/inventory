@@ -24,7 +24,7 @@
     
     {{-- Table --}}
     <div id="categories" class="p-2 bg-white rounded-lg">
-        <table id="departmentList" class="table-auto border border-collapse">
+        <table id="departmentList" class="tableWidth">
             <thead>
                 <tr class="">
                     <th class="border px-2 py-1">#</th>

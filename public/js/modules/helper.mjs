@@ -15,4 +15,4 @@ export default function getIndex(tabName){
 
 }
 
-export default function 
+// export default function 

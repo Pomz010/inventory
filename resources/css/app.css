@@ -41,3 +41,7 @@
 .formWidth {
     @apply w-6/12 mx-auto min-w-max max-w-xl grid items-center;
 }
+
+.tableWidth {
+    @apply table-auto border border-collapse w-full;
+}
