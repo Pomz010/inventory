@@ -39,7 +39,7 @@
         <td class="border px-2 py-1">{{ $asset->price }}</td>
         <td class="border px-2 py-1"></td>
         <td class="border px-2 py-1"></td>
-      @endforeach
       </tr>
+      @endforeach
     </tbody>
 </table>

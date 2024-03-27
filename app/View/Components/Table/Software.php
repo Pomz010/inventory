@@ -11,10 +11,10 @@ class Software extends Component
     /**
      * Create a new component instance.
      */
-    // public $hardwareAssets;
-    public function __construct()
+    public $softwareAssets;
+    public function __construct($softwareAssets)
     {
-        // $this->hardwareAssets = $hardwareAssets;
+        $this->softwareAssets = $softwareAssets;
     }
 
     /**

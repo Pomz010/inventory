@@ -42,9 +42,10 @@
             </tr>
           </thead>
           <tbody>
+            @foreach ( $softwareAssets as $software )
             <tr>
               <td class="border px-2 py-1">1</td>
-              <td class="border px-2 py-1">Microsoft Office</td>
+              <td class="border px-2 py-1">{{ $software->name }}</td>
               <td class="border px-2 py-1">MS Office Home and Business 2019</td>
               <td class="border px-2 py-1">Microsoft</td>
               <td class="border px-2 py-1">2019</td>
@@ -60,6 +61,7 @@
               <th class="border px-2 py-1"></th>
               <th class="border px-2 py-1"></th>
             </tr>
+            @endforeach
           </tbody>
       </table>
     </div>

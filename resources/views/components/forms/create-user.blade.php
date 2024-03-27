@@ -45,7 +45,7 @@
 
                     <label class="font-semibold" for="userEmail">Email</label>
                     <div class="col-span-2">
-                        <input class="w-full" id="userEmail" name="email" type="text" value="" disabled>
+                        <input class="w-full" id="userEmail" name="email" type="text" value="">
                         @error('email')
                             <p class="text-red-500"> {{ $message }}</p>
                         @enderror

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\HardwareAsset;
+use App\Models\SoftwareAsset;
 use App\Models\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -16,7 +17,8 @@ class AssetController extends Controller
             $hardwareAssets = HardwareAsset::all();
             $laptops = HardwareAsset::where('item', '=', 'laptop')->take(10)->get();
             $systemUnits = HardwareAsset::where('item', '=', 'system unit')->take(10)->get();
-            return view('components.nav-contents.asset-monitoring', compact('hardwareAssets', 'laptops', 'systemUnits'));
+            $softwareAssets = SoftwareAsset::all();
+            return view('components.nav-contents.asset-monitoring', compact('hardwareAssets', 'laptops', 'systemUnits', 'softwareAssets'));
         } else {
             return redirect('/');
         }
@@ -25,9 +27,10 @@ class AssetController extends Controller
     public function create(string $asset){
         if(auth()->check()){
             $vendors = Vendor::all();
+            $softwareAssets = SoftwareAsset::all();
             // dd($vendors);
             $newAsset = $asset;
-            return view('components.forms.create-asset', ['asset' => $newAsset, 'vendors' => $vendors]);
+            return view('components.forms.create-asset', ['asset' => $newAsset, 'vendors' => $vendors, 'softwareAssets' => $softwareAssets]);
         } else {
             return redirect('/');
         }

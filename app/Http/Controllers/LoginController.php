@@ -32,7 +32,7 @@ class LoginController extends Controller
 
         return redirect('/');
     }
-
+    
     function signout(){
         auth()->logout();
         return redirect('/');

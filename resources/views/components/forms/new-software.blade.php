@@ -4,7 +4,7 @@
         <x-forms.partials.asset-entry-form-container id="newEntry"/>
     </div>
 
-    <form action="#">
+    <x-forms.partials.asset-form-container>
         @csrf
         
         <div class="formInputWrapper">
@@ -25,9 +25,6 @@
 
             <label class="font-semibold" for="laptopMemory">Product Key</label>
             <input class="col-span-2" id="laptopMemory" name="laptopMemory" type="text">
-
-            <label class="font-semibold" for="laptopStorage">Vendor</label>
-            <input class="col-span-2" id="laptopStorage" name="laptopStorage" type="text">
 
             <label class="font-semibold" for="laptopSerial">Purchase Type</label>
             <input class="col-span-2" id="laptopSerial" name="laptopSerial" type="text">
@@ -50,10 +47,9 @@
             <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
 
             <label class="font-semibold" for="laptopPurchaseDate">Price</label>
-            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="text">
+            <input class="col-span-2" id="laptopPurchaseDate" name="laptopPurchaseDate" type="number">
         </div>
-
-        <x-forms.partials.button-set />
         
-    </form>
+        <x-forms.partials.button-set />
+    </x-forms.partials.asset-form-container>
 </div>

@@ -42,13 +42,13 @@
                 </thead>
                 <tbody>
                     @php
-                     $counter = 1;   
+                     $counter = 1;
                     @endphp
 
                     @foreach ($users as $user)
                         <tr>
                             <td class="border px-2 py-1">{{ $counter++ }}</td>
-                            <td class="border px-2 py-1">{{ $user->employee_id }}</td>
+                            <td class="border px-2 py-1">{{ $user->firstname }}</td>
                             <td class="border px-2 py-1">{{ $user->username }}</td>
                             <td class="border px-2 py-1">{{ $user->role }}</td>
                             <td class="border px-2 py-1">{{ $user->email }}</td>
