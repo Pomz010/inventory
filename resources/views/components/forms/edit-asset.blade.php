@@ -1,9 +1,9 @@
 <x-main>
     <div class="formWidth">
-        @switch($asset)
+        @switch($asset->item)
             @case('laptop')
-                <x-forms.new-laptop :vendors='$vendors' />
-                {{-- @dump($asset) --}}
+                <x-forms.edit.laptop :asset="$asset" :vendors='$vendors'/>
+                {{-- @dump($asset->item) --}}
                 @break
 
             @case('system unit')

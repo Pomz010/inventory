@@ -9,11 +9,11 @@
             <ul id="mainNav" class="flex text-white gap-x-2">
                 <li class="px-2"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li class="px-2"><a href="{{ route('assets.index') }}">Asset Monitoring</a></li>
-                <li class="px-2"><a href="{{ route('department.index') }}">Department</a></li>
+                {{-- <li class="px-2"><a href="{{ route('department.index') }}">Department</a></li>
                 <li class="px-2"><a href="{{ route('employees.index') }}">Employee List</a></li>
                 <li class="px-2"><a href="{{ route('users.index') }}">Users</a></li>
                 <li class="px-2"><a href="{{ route('vendors.index') }}">Vendor</a></li>
-                <li class="px-2"><a href="#">Service Support</a></li>
+                <li class="px-2"><a href="#">Service Support</a></li> --}}
             </ul> 
         </div>
         

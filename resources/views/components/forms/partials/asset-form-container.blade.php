@@ -1,3 +1,3 @@
-<form action="{{ route('create-asset.store') }}" method="POST">
+<form action="{{ route('assets.store') }}" method="POST">
     {{ $slot }}
 </form>
