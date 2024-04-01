@@ -36,7 +36,8 @@ Route::get('/assets', [HardwareController::class, 'index'])->name('assets.index'
 Route::get('/assets/{asset}/create', [HardwareController::class, 'create'])->name('assets.create');
 Route::post('/assets/store', [HardwareController::class, 'store'])->name('assets.store');
 Route::get('/assets/{asset}/edit', [HardwareController::class, 'edit'])->name('assets.edit');
-Route::put('/assets/{asset}/update', [HardwareController::class, 'update'])->name('assets.update');
+Route::put('/assets/{asset}', [HardwareController::class, 'update'])->name('assets.update');
+Route::delete('/assets/{asset}', [HardwareController::class, 'destroy'])->name('assets.destroy');
 
 Route::get('/redirect', [PreviousPageController::class, 'returnToPreviousPage'])->name('redirect');
 

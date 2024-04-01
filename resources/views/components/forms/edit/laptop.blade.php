@@ -5,7 +5,7 @@
     </div>
 
     {{-- <x-forms.partials.update-form-container :asset="$asset" > --}}
-    <form action="/assets/{{ $attributes['asset']->id }}/update" method="POST">
+    <form action="{{ route('assets.update', ['asset' => $attributes['asset']->id] )}}" method="POST">
         @csrf
         @method('PUT')
         
@@ -89,9 +89,12 @@
             <label class="font-semibold" for="laptopHostname">Hostname</label>
             <div class="col-span-2">
                 <input class="w-full" id="laptopHostname" name="hostname" type="text" value="{{ old('hostname',  $attributes['asset']->hostname) }}">
+                @error('hostname')
+                <p class="text-red-500"> {{ $message }}</p>
+                @enderror
             </div>
     
-            {{-- <x-forms.partials.vendor-dropdown :vendors='$vendors' /> --}}
+            <x-forms.partials.vendor-dropdown :vendors='$attributes["vendors"]' />
     
             <label class="font-semibold" for="laptopPurchaseDate">Date Purchased</label>
             <div class="col-span-2">

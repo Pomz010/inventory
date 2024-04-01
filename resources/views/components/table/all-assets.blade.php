@@ -40,7 +40,14 @@
         <td class="border px-2 py-1">{{ $asset->price }}</td>
         <td class="border px-2 py-1"></td>
         <td class="border px-2 py-1"></td>
-        <td class="border px-2 py-1"><a href="{{ route('assets.edit', ['asset' => $asset->id]) }}">Edit</a></td>
+        <td class="border px-2 py-1">
+          <a href="{{ route('assets.edit', ['asset' => $asset->id]) }}">Edit</a>
+          <form action="{{ route('assets.destroy', ['asset' => $asset->id]) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit">Delete</button>
+          </form>
+        </td>
       @endforeach
       </tr>
     </tbody>
