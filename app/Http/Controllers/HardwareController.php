@@ -11,8 +11,22 @@ use Illuminate\Support\Facades\Session;
 class HardwareController extends Controller
 {
 
+        public function show(HardwareAsset $asset){
+        if(auth()->check()){
+            // dump($asset);
+            // Session::put('previousPage', request()->fullUrl());
+            // $hardwareAssets = HardwareAsset::all();
+            // $laptops = HardwareAsset::where('item', '=', 'laptop')->take(10)->get();
+            // $systemUnits = HardwareAsset::where('item', '=', 'system unit')->take(10)->get();
+            return view('components.pages.single-asset', compact('asset'));
+        } else {
+            return redirect('/');
+        }
+    }
+
     public function destroy(HardwareAsset $asset){
-        dump($asset);
+        $asset->delete();
+        return redirect()->route('assets.index')->with('success', 'Asset deleted successfully');
     }
 
     public function update(HardwareAsset $asset, Request $request){
@@ -86,14 +100,16 @@ class HardwareController extends Controller
 
     public function create(string $asset){
         if(auth()->check()){
+            // dump($asset);
             $vendors = Vendor::all();
             $hardwareAssets = HardwareAsset::all();
             $newAsset = $asset;
+            return view('components.forms.create-asset', ['asset' => $newAsset, 'vendors' => $vendors]);
             // dump($vendors);
             // return view('components.forms.new-laptop');
             // return view('components.forms.new-laptop', ['vendors' => $vendors]);
             // dump($newAsset);
-            return view('components.forms.create-asset', ['asset' => $newAsset, 'vendors' => $vendors]);
+            
             // return view('components.forms.create-asset', ['asset' => $newAsset, 'vendors' => $vendors, 'hardwareAssets' => $hardwareAssets]);
         } else {
             return redirect('/');
@@ -115,7 +131,7 @@ class HardwareController extends Controller
                 'serial_number' => ['required', 'string', 'max:255'],
                 'os_name' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'serial_number')],
                 'os_category' => ['nullable', 'string', 'max:255'],
-                'os_productKey' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'os_productKey')->ignore($asset->id)],
+                // 'os_productKey' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'os_productKey')->ignore($asset->id)],
                 'hostname' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'hostname')],
                 'vendor' => ['required', 'string', 'max:255'],
                 'purchase_date' => ['required', 'date'],
@@ -135,13 +151,16 @@ class HardwareController extends Controller
                 'account_#' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'account_#')],
                 'data_plan' => ['nullable', 'string', 'max:255'],
                 'description' => ['nullable', 'string', 'max:255'],
+                'user' => ['nullable', 'string', 'max:255'],
+                'condition' => ['nullable', 'string', 'max:255'],
+                'status' => ['nullable', 'string', 'max:255'],
             ]);
 
-            $data = array_map('strtolower', $newAsset);
-            // dd($newAsset);
-            HardwareAsset::create($data);
+            // $data = array_map('strtolower', $newAsset);
+            dump($newAsset);
+            // HardwareAsset::create($data);
 
-            return redirect()->back()->with('success', 'New asset added successfully');
+            // return redirect()->back()->with('success', 'New asset added successfully');
         } else {
             return redirect('/');
         }

@@ -4,41 +4,87 @@
         <x-forms.partials.asset-entry-form-container id="newEntry"/>
     </div>
 
-    <form action="#">
+    <x-forms.partials.asset-form-container >
+        @csrf
         
         <div class="formInputWrapper">
-            <input class="col-span-2" id="monitorItem" name="item" value="monitor" type="text" hidden>
 
             <label class="font-semibold" for="monitorAssetTag">Asset Tag</label>
-            <input class="col-span-2" id="monitorAssetTag" name="asset_tag" type="text">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorAssetTag" name="asset_tag" type="text" value="{{ $errors->has('asset_tag') ? old('') : old('asset_tag'); }}">
+                @error('asset_tag')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
 
             <label class="font-semibold" for="monitorBrand">Brand</label>
-            <input class="col-span-2" id="monitorBrand" name="brand" type="text">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorBrand" name="brand" type="text" value="{{ $errors->has('brand') ? old('') : old('brand'); }}">
+                @error('brand')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
 
             <label class="font-semibold" for="monitorModel">Model</label>
-            <input class="col-span-2" id="monitorModel" name="model" type="text">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorModel" name="model" type="text" value="{{ $errors->has('model') ? old('') : old('model'); }}">
+                @error('model')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
 
             <label class="font-semibold" for="monitorSerial">Serial #</label>
-            <input class="col-span-2" id="monitorSerial" name="serial_#" type="text">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorSerial" name="serial_#" type="text" value="{{ $errors->has('serial_#') ? old('') : old('serial_#'); }}">
+                @error('serial_#')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
 
             <x-forms.partials.vendor-dropdown :vendors='$vendors' />
 
             <label class="font-semibold" for="monitorPurchaseDate">Date Purchased</label>
-            <input class="col-span-2" id="monitorPurchaseDate" name="purchase_date" type="date">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorPurchaseDate" name="purchase_date" type="date" value="{{ $errors->has('purchase_date') ? old('') : old('purchase_date'); }}">
+                @error('purchase_date')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
 
             <label class="font-semibold" for="monitorWarranty">Warranty Expiration</label>
-            <input class="col-span-2" id="monitorWarranty" name="warranty" type="date">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorWarranty" name="warranty" type="date" value="{{ $errors->has('warranty') ? old('') : old('warranty'); }}">
+                @error('warranty')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
 
             <label class="font-semibold" for="monitorDR">DR #</label>
-            <input class="col-span-2" id="monitorDR" name="dr_#" type="text">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorDR" name="dr_#" type="text" value="{{ $errors->has('dr_#') ? old('') : old('dr_#'); }}">
+                @error('dr_#')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
 
             <label class="font-semibold" for="monitorPurchaseDate">PO #</label>
-            <input class="col-span-2" id="monitorPurchaseDate" name="po_#" type="text">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorPurchaseDate" name="po_#" type="text" value="{{ $errors->has('po_#') ? old('') : old('po_#'); }}">
+                @error('po_#')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
 
             <label class="font-semibold" for="monitorPrice">Price</label>
-            <input class="col-span-2" id="monitorPrice" name="price" type="text">
+            <div class="col-span-2">
+                <input class="w-full" id="monitorPrice" name="price" type="text" value="{{ $errors->has('price') ? old('') : old('price'); }}">
+                @error('price')
+                    <p class="text-red-500"> {{ $message }}</p>
+                @enderror
+            </div>
+
         </div>
 
         <x-forms.partials.button-set />
-    </form>
+    </x-forms.partials.asset-form-container>
 </div>

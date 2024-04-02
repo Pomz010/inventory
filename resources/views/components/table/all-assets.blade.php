@@ -27,7 +27,7 @@
       @foreach ($hardwareAssets as $asset)
       <tr>
         <td class="border px-2 py-1">{{ $counter++ }}</td>
-        <td class="border px-2 py-1">{{ $asset->asset_tag }}</td>
+        <td class="border px-2 py-1"><a href="{{ route('assets.show', $asset->id) }}">{{ $asset->asset_tag }}</a></td>
         <td class="border px-2 py-1">{{ $asset->item }}</td>
         <td class="border px-2 py-1">{{ $asset->user }}</td>
         <td class="border px-2 py-1"></td>

@@ -6,7 +6,7 @@
                 {{-- @dump($asset) --}}
                 @break
 
-            @case('system unit')
+            @case('system-unit')
                 <x-forms.new-system-unit :vendors='$vendors'/>
                 @break
 

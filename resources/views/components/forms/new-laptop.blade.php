@@ -15,8 +15,6 @@
         
         <div class="formInputWrapper">
 
-            <input class="col-span-2" id="monitorItem" name="item" type="text" value="laptop" hidden>
-
             <label class="font-semibold" for="laptopAssetTag">Asset Tag</label>
             <div class="col-span-2">
                 <input class="w-full" id="laptopAssetTag" name="asset_tag" type="text" value="{{ $errors->has('asset_tag') ? old('') : old('asset_tag'); }}">
@@ -74,7 +72,7 @@
                 <input class="w-full" id="laptopOS" name="os_name" type="text" value="{{ $errors->has('os_name') ? old('') : old('os_name'); }}">
             </div>
 
-            <label class="font-semibold" for="osCategory">OS Category</label>
+            {{-- <label class="font-semibold" for="osCategory">OS Category</label>
             <div class="col-span-2">
                 <select class="w-full" id="osCategory" name="os_category" type="text" value="{{ $errors->has('os_category') ? old('') : old('os_category'); }}">
                     <option value="oem">OEM</option>
@@ -88,7 +86,7 @@
                 @error('os_productKey')
                 <p class="text-red-500"> {{ $message }}</p>
                 @enderror
-            </div>
+            </div> --}}
     
             <label class="font-semibold" for="laptopHostname">Hostname</label>
             <div class="col-span-2">
