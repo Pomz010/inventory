@@ -4,7 +4,7 @@
         <x-forms.partials.asset-entry-form-container id="newEntry"/>
     </div>
 
-    <x-forms.partials.asset-form-container >
+    <x-forms.partials.asset-form-container>
         @csrf
         
         <div class="formInputWrapper">

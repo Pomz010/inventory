@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('hardware_assets', function (Blueprint $table) {
             $table->id();
-            $table->string('asset_tag')->unique();
+            $table->string('asset_tag')->unique()->nullable();
             $table->string('item');
             $table->string('brand');
             $table->string('model');

@@ -119,7 +119,7 @@ class HardwareController extends Controller
     function store(HardwareAsset $asset, Request $request){
         if(auth()->check()){
             $newAsset = $request->validate([
-                'asset_tag' => ['required', 'string', 'max:255', Rule::unique('hardware_assets', 'asset_tag')],
+                'asset_tag' => ['nullable', 'string', 'max:255', Rule::unique('hardware_assets', 'asset_tag')->ignore($asset->id)],
                 'item' => ['required', 'string', 'max:255'],
                 'brand' => ['required', 'string', 'max:255'],
                 'model' => ['required', 'string', 'max:255'],
@@ -156,11 +156,11 @@ class HardwareController extends Controller
                 'status' => ['nullable', 'string', 'max:255'],
             ]);
 
-            // $data = array_map('strtolower', $newAsset);
-            dump($newAsset);
-            // HardwareAsset::create($data);
+            $data = array_map('strtolower', $newAsset);
+            // dump($newAsset);
+            HardwareAsset::create($data);
 
-            // return redirect()->back()->with('success', 'New asset added successfully');
+            return redirect()->back()->with('success', 'New asset added successfully');
         } else {
             return redirect('/');
         }

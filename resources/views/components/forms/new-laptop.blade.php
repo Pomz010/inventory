@@ -15,6 +15,8 @@
         
         <div class="formInputWrapper">
 
+            <input class="col-span-2" id="laptopItem" name="item" value="laptop" type="text" hidden>
+
             <label class="font-semibold" for="laptopAssetTag">Asset Tag</label>
             <div class="col-span-2">
                 <input class="w-full" id="laptopAssetTag" name="asset_tag" type="text" value="{{ $errors->has('asset_tag') ? old('') : old('asset_tag'); }}">

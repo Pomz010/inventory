@@ -7,7 +7,6 @@
             <th class="border px-2 py-1">Asset Tag</th>
             <th class="border px-2 py-1">Brand</th>
             <th class="border px-2 py-1">Model</th>
-            <th class="border px-2 py-1">Asset Tag</th>
             <th class="border px-2 py-1">Serial #</th>
             <th class="border px-2 py-1">Processor</th>
             <th class="border px-2 py-1">Memory</th>
@@ -33,7 +32,6 @@
             <td class="border px-2 py-1">{{ $laptop->asset_tag }}</td>
             <td class="border px-2 py-1">{{ $laptop->brand }}</td>
             <td class="border px-2 py-1">{{ $laptop->model }}</td>
-            <td class="border px-2 py-1">{{ $laptop->asset_tag }}</td>
             <td class="border px-2 py-1">{{ $laptop->serial_number }}</td>
             <td class="border px-2 py-1">{{ $laptop->processor }}</td>
             <td class="border px-2 py-1">{{ $laptop->memory }}</td>
